@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- important meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Sign Up</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/favicon/favicon.ico">
+
+    <!-- google fonts --->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../css/responsive.css">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status"></div>
+    </div>
+
+    <!-- Sign Up  -->
+    <section id="signup">
+
+        <!-- Background Image -->
+        <div id="common-bg-img">
+            <img src="../img/pre-login/banner-with-overlay.jpg" alt="Login Page">
+        </div>
+
+        <!-- Logo -->
+        <div class="logo-signup">
+            <!-- logo -->
+            <img src="../img/home/top-logo.png" alt="logo" id="logo-img">
+        </div>
+
+        <!-- Sign Up Form -->
+        <div id="signupform" class="container">
+            <form>
+                <div id="signup-heading" class="text-center">
+                    <h2>Create an Account</h2>
+                    <p>Enter your details to signup</p>
+                </div>
+                <div class="created-text text-center valid-information">
+                    <p><i class="fa fa-check-circle"></i> Your account has been successfully created.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <label for="firstname-signup">First Name *</label>
+                            <input type="text" class="form-control" id="firstname-signup" placeholder="Enter your first name" required>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <label for="lastname-signup">Last Name *</label>
+                            <input type="text" class="form-control" id="lastname-signup" placeholder="Enter your last name" required>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <label for="email-id-signup">Email *</label>
+                            <input type="email" class="form-control" id="email-id-signup" placeholder="Enter your email address" required>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="row" id="pass">
+                            <div class="col-md-12">
+                                <label for="password-field-signup">Password *</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input id="password-field-signup" type="password" class="form-control" name="password" placeholder="Enter your password" required>
+                            <span toggle="#password-field-signup" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="row" id="pass">
+                            <div class="col-md-12 col-sm-12">
+                                <label for="re-password-field-signup">Confirm Password *</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input id="re-password-field-signup" type="password" class="form-control" name="password" placeholder="Re-enter your password" required>
+                            <span toggle="#re-password-field-signup" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary btn-lg btn-block btn-signup" type="submit">SIGN UP</button>
+                </div>
+                <div class="col-md-12 text-center col-sm-12 col-xs-12">
+                    <p id="log-in-text">Already have an account?<a href="#"> Login</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Sign Up Form Ends-->
+
+    <!-- JQuery -->
+    <script src="../js/jquery.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>
