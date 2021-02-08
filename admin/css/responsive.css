@@ -1,0 +1,2800 @@
+/* =================================
+        Mobile Menu
+===================================*/
+
+.navbar-header {
+    position: relative;
+}
+
+#mobile-nav-open-btn {
+    font-size: 30px;
+    color: #6255a5;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    /* Hide mobile nav open btn */
+    display: none;
+}
+
+#mobile-nav {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, .9);
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+    overflow-y: hidden;
+}
+
+#mobile-nav-close-btn {
+    font-size: 70px;
+    color: #d1d1d1;
+    font-weight: 400;
+    cursor: pointer;
+    position: absolute;
+    top: -9px;
+    right: 13px;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+#mobile-nav-content {
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+    top: 10%;
+}
+
+#mobile-nav li a {
+    font-size: 18px;
+    color: #333333;
+    font-weight: 400;
+    display: inline-block;
+    margin-bottom: 20px !important;
+    -webkit-transition: .3s;
+    transition: .3s;
+    text-decoration: none;
+}
+
+#mobile-nav a:hover,
+#mobile-nav a:focus,
+#mobile-nav-close-btn:hover,
+#mobile-nav-close-btn:focus {
+    color: #6255a5;
+    background: none;
+}
+
+
+/*============================================
+            Bootstrap 3 Media Queries
+=============================================*/
+
+/* Large Devices (Desktop & Laptops) */
+
+@media (min-width: 1200px) and (max-width: 1299px) {
+
+    /* Navigation */
+    .site-nav-wrapper {
+        padding: 0 10px;
+    }
+}
+
+/* Medium Devices (Landscape Tablets & Medium Desktop) */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    /* Navigation */
+    .site-nav-wrapper {
+        padding: 0 10px;
+    }
+
+    .navbar-brand img {
+        margin: -7px 0 0 -70px !important;
+    }
+
+    .white-nav-top ul.navbar-nav > li > a {
+        color: #333333 !important;
+        font-size: 15px;
+        padding: 15px 7px 0 7px;
+    }
+
+    #main-menu img {
+        margin-right: -10px;
+    }
+
+    .white-nav-top ul.navbar-nav > li > a.u-img {
+        border-bottom: none;
+    }
+
+    .white-nav-top ul.navbar-nav > li > a:hover,
+    .white-nav-top ul.navbar-nav > li > a:focus {
+        background: none;
+        padding-bottom: 5px;
+    }
+
+    /* =================================
+            Dashboard
+    ===================================*/
+
+    #dashboard h2 {
+        font-size: 30px;
+        line-height: 36px;
+        margin: 60px 0 10px 0;
+    }
+
+    #up-side .row .col-md-4 {
+        height: 120px;
+        width: 300px;
+    }
+
+    /* Published Notes */
+    #published-notes input {
+        margin: 40px 0 0 0;
+        width: 100%;
+        padding-left: 33px;
+    }
+
+    #published-notes .search-icon {
+        margin-top: -24px;
+        margin-right: 88%;
+    }
+
+    #published-notes button {
+        margin: 38px 0 0 -17px;
+        width: 150%;
+        padding: 15px 0;
+        line-height: 0;
+    }
+
+    #published-notes select {
+        font-size: 14px;
+    }
+
+    /* ===========================
+        Downloaded Notes          
+    ============================== */
+
+    #down-notes h2 {
+        font-size: 30px;
+        margin: 60px 0 20px 0;
+    }
+
+    #down-notes input {
+        margin: 25px 0 0 150px;
+        padding-left: 30px;
+    }
+
+    #down-notes #search-btn {
+        line-height: 0;
+        padding: 15px 0;
+        margin: 25px 0 0 130px;
+    }
+
+    /* =================================
+            Manage Admin
+    ===================================*/
+    #manage-admin h2,
+    #manage-cat h2,
+    #manage-country h2,
+    #manage-type h2 {
+        font-size: 30px;
+        line-height: 36px;
+        margin: 60px 0 -10px 0;
+    }
+
+    #manage-admin #add-admin,
+    #manage-cat #add-cat,
+    #manage-country #add-country,
+    #manage-type #add-type {
+        font-size: 14px;
+        line-height: 0;
+        padding: 10px 0;
+        width: 28%;
+        margin-top: 40px;
+    }
+
+    #manage-admin button,
+    #manage-cat #manage-cat-search-btn,
+    #manage-country #manage-country-search-btn,
+    #manage-type #manage-type-search-btn {
+        margin: 39px 0 0 -20px;
+        width: 140%;
+        padding: 15px 0;
+        font-size: 14px;
+        line-height: 0;
+    }
+
+    #manage-admin input,
+    #manage-cat input,
+    #manage-country input,
+    #manage-type input,
+    #members input {
+        height: 35px;
+    }
+
+    #manage-admin .search-icon,
+    #manage-cat .search-icon,
+    #manage-country .search-icon,
+    #manage-type .search-icon {
+        margin-top: -24px;
+        margin-right: 88%;
+    }
+
+    /* Member */
+    #members h2 {
+        font-size: 30px;
+        line-height: 36px;
+        margin: 80px 0 -10px 0;
+    }
+
+    #members button {
+        line-height: 0;
+        padding: 15px 0;
+        font-size: 13px;
+    }
+
+    /* =================================
+            Manage sys config
+    ===================================*/
+    #manage-sys-config h2 {
+        font-size: 30px;
+        margin: 60px 0 10px 0;
+    }
+
+    /* Login */
+    .logo-login {
+        margin-top: -275px;
+    }
+
+    .loginform {
+        margin-top: -225px;
+    }
+
+    /* =================================
+            Notes Under Review   
+    ==================================== */
+    #notes-under-review h2 {
+        font-size: 30px;
+        line-height: 34px;
+        margin: 80px 0 10px 0;
+    }
+
+    table button {
+        font-size: 14px !important;
+        line-height: 22px !important;
+        width: 85px !important;
+        padding: 0 !important;
+        margin-top: 5px
+    }
+
+    #search-btn {
+        border-radius: 3px;
+        font-size: 14px;
+        line-height: 0;
+        width: 100px;
+        padding: 15px 0;
+        margin: 25px 0 0 -50px;
+    }
+
+    /* ===========================
+       Rejected Notes      
+============================== */
+    #rejected-notes h2 {
+        font-size: 30px;
+        margin: 60px 0 20px 0;
+    }
+
+    #rejected-notes #search-btn {
+        font-size: 14px;
+        line-height: 0;
+        width: 100px;
+        padding: 15px;
+    }
+
+    /* =================================
+            spam report
+    ===================================*/
+    #spam-report button {
+        margin: 80px 0 0 -20px;
+        width: 130%;
+        line-height: 0;
+        padding: 15px 0;
+        font-size: 13px;
+    }
+
+    /* =================================
+            Note details
+    ===================================*/
+    /* Left Side */
+
+    .left-side-notes {
+        width: 560px;
+        margin-left: 0;
+    }
+
+    .left-side-notes img {
+        height: 250px;
+        width: 190px;
+    }
+
+    .left-side-notes h2 {
+        margin: 0 0 0 -40px;
+    }
+
+    .left-side-notes p {
+        margin-left: -40px;
+        font-size: 15px;
+    }
+
+    #download-price-btn button {
+        width: 170px;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0 0 0 -40px;
+        padding: 0;
+    }
+
+    /* Right Side */
+
+    .right-side-notes {
+        margin-left: 20px;
+        width: 370px;
+    }
+
+    .right-side-notes p {
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+    /*Thank yoy popup*/
+    #exampleModal {
+        margin-top: 50px;
+    }
+
+    #exampleModal span {
+        font-size: 40px;
+    }
+
+    #exampleModal img {
+        margin-top: -30px;
+        height: 53px;
+        width: 53px;
+    }
+
+    .model-content {
+        padding: 30px 30px 20px 70px;
+    }
+
+    .model-content p {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    /* Note details - buttom */
+
+    #notes-preview {
+        margin: -60px 0 0 0;
+    }
+
+    #notes-preview h3 {
+        margin: 0 0 20px 0;
+    }
+
+    .set-margin-cicis-menu-to-go {
+        margin: 0px;
+    }
+
+    .set-padding-cicis-menu-to-go {
+        padding: 30px;
+    }
+
+    .set-border-cicis-menu-to-go {
+        width: 380px;
+        height: 400px;
+        padding: 0;
+    }
+
+    .responsive-wrapper {
+        height: 400px;
+        width: 400px;
+    }
+
+    /* note details - Customer Reviews */
+    #customer-review .col-md-7 {
+        height: 400px;
+    }
+
+    #customer-review img {
+        height: 50px;
+        width: 50px;
+        margin: -11px 0 0 -10px;
+    }
+
+    #customer-review .row {
+        padding: 30px 20px 10px 20px;
+    }
+
+    #customer-review p {
+        font-size: 15px;
+        margin-top: 0;
+    }
+
+    #customer-review .rate {
+        margin: -3px -10px 0 -10px;
+    }
+
+    .cust-name {
+        margin: -10px 0 6px 0;
+    }
+
+    .cust-2,
+    .cust-3 {
+        margin: 0;
+    }
+
+    .cust-1 .col-md-10,
+    .cust-2 .col-md-10,
+    .cust-3 .col-md-10 {
+        margin-left: -40px;
+    }
+
+    .cust-1 p,
+    .cust-2 p {
+        margin-bottom: 0;
+    }
+
+    /* =================================
+            Member Info
+    ===================================*/
+    #member-info {
+        margin: 0 0 60px 0;
+    }
+
+    #member-details hr {
+        border: 0.5px solid #d1d1d1;
+        margin: -25px 0 50px 0;
+    }
+
+    #member-info h2 {
+        margin: 70px 0 20px 25px;
+    }
+
+    /* Member info left */
+    .member-left-side:last-child {
+        border-right: 1px solid #d1d1d1;
+    }
+
+    .member-left-side img {
+        height: 120px;
+        width: 120px;
+        margin: 5px 0 0 10px;
+    }
+
+    .member-detail {
+        margin: 2px -25px 0 -140px;
+    }
+
+    .member-left-side p,
+    .member-right-side p {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 400;
+    }
+
+    .member-right-side p span {
+        margin-left: -50px;
+    }
+
+    .member-left-side span {
+        color: #6255a5;
+        margin: 0 0 0 -10px;
+        font-weight: 600;
+
+    }
+
+    /* Member info right */
+
+    .member-right-side span {
+        color: #6255a5;
+        margin: 0 0 0 -120px;
+        font-weight: 600;
+    }
+
+    /* Notes */
+    #member-notes h2 {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 30px;
+        color: #6255a5;
+        margin: 0 0 20px 0;
+    }
+
+    #member-notes span {
+        color: #6255a5;
+    }
+
+}
+
+/* Small Devices (Portrait Tablets & Small Desktop) */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* Footer */
+    footer {
+        width: 102%;
+    }
+
+    footer p {
+        font-size: 15px;
+    }
+
+    label {
+        font-size: 14px !important;
+    }
+
+    /* Container H2 */
+    .container h2 {
+        font-size: 24px !important;
+        line-height: 30px !important;
+    }
+
+    /* Navigation */
+    .navbar {
+        height: 70px;
+    }
+
+    .site-nav-wrapper {
+        padding: 15px 0 0 0;
+        margin: 0;
+    }
+
+    .navbar-brand img {
+        height: 30px;
+        margin: -10px 0 0 -50px;
+    }
+
+    #navigation-login-btn {
+        margin-top: 0;
+    }
+
+    #navigation-login-btn {
+        height: 20px;
+        width: 80px;
+        font-size: 14px;
+        padding: 1px 0 21px 0;
+        margin: 2px 0 0 15px;
+    }
+
+    ul.navbar-nav > li > a {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .white-nav-top ul.navbar-nav > li > a#navigation-login-btn {
+        font-size: 14px;
+        margin-top: 0;
+        height: 25px;
+        padding: 2px 0 2px 0;
+    }
+
+    ul.navbar-nav > li > a {
+        font-size: 11px;
+        padding: 15px 0 0 0;
+        margin-top: -10px;
+    }
+
+    .white-nav-top ul.navbar-nav > li > a {
+        padding: 15px 5px 0 5px;
+    }
+
+    #main-menu img {
+        height: 30px;
+        width: 30px;
+        margin: -10px -10px 0 0;
+    }
+
+    .white-nav-top ul.navbar-nav > li > a.u-img {
+        border-bottom: none;
+    }
+
+    .white-nav-top ul.navbar-nav > li > a:hover,
+    .white-nav-top ul.navbar-nav > li > a:focus {
+        background: none;
+        padding-bottom: 5px;
+    }
+
+    /* =================================
+            add admin
+    ===================================*/
+    #add-admin h2 {
+        margin: 50px 0 10px 0;
+    }
+
+    #add-admin input,
+    #add-admin select,
+    #add-cat input,
+    #add-cat textarea,
+    #add-country input,
+    #add-type input,
+    #add-type textarea {
+        font-size: 14px;
+        line-height: 20p;
+    }
+
+    #add-admin-submit {
+        line-height: 0;
+        padding: 15px 0 !important;
+    }
+
+    #country-code {
+        padding: 3px 5px;
+        width: 120%;
+        height: 35px;
+        margin: 0 0 0 -10px;
+    }
+
+    #add-admin-submit {
+        padding: 10px 0 30px 0;
+        width: 20%;
+        font-size: 14px;
+    }
+
+    /* Add Catagory */
+    #add-cat-submit,
+    #add-country-submit,
+    #add-type-submit {
+        line-height: 0;
+        padding: 15px 0;
+    }
+
+    /* Dashboard */
+    #up-side .row .col-md-4 {
+        border: 1px solid #d1d1d1;
+        padding: 30px 0px;
+        vertical-align: middle;
+        height: 120px;
+        width: 240px;
+        margin: 0 5px 10px 5px;
+    }
+
+    #published-notes input {
+        margin: 40px 0 0 0;
+        width: 100%;
+        padding-left: 33px;
+    }
+
+    #published-notes .search-icon {
+        margin-top: -24px;
+        margin-right: 85%;
+    }
+
+    #published-notes button {
+        margin: 38px 0 0 -25px;
+        width: 220%;
+        line-height: 0;
+        padding: 15px 0;
+        font-size: 12px;
+    }
+
+    #published-notes select {
+        margin: 38px 0 0 -10px;
+        font-size: 14px;
+        width: 120%;
+    }
+
+    /* dwnload notes */
+    #down-notes select {
+        width: 80%;
+        margin: 0 0 10px 0;
+        font-size: 14pz;
+    }
+
+    #down-notes input {
+        margin: 25px 0 0 90px;
+        width: 130%;
+        padding-left: 25px;
+    }
+
+    #down-notes #search-btn {
+        font-size: 14px;
+        line-height: 0;
+        width: 80px;
+        padding: 15px 0;
+        margin: 25px 0 0 100px;
+    }
+
+    #down-notes .search-icon {
+        margin-top: -25px;
+        margin-right: -20%;
+    }
+
+    /* Login */
+    .loginform {
+        padding: 30px;
+        height: 460px;
+        width: 500px;
+    }
+
+    .loginform h4 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
+    .loginform p {
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 0 20px 0;
+    }
+
+    .loginform label {
+        font-size: 14px;
+    }
+
+    #pass a {
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 0 5px 0;
+    }
+
+    /* Forgot Password */
+    #forgotpassword-heading h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    #forgotpassword-heading p {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    #forgotpasswordform {
+        height: 280px;
+    }
+
+    /* =================================
+            Manage Admin
+    ===================================*/
+    #manage-admin h2,
+    #manage-cat h2,
+    #manage-country h2,
+    #manage-type h2 {
+        font-size: 30px;
+        line-height: 34px;
+        margin: 60px 0 -20px 0;
+    }
+
+    #manage-admin #add-admin,
+    #manage-cat #add-cat,
+    #manage-country #add-country,
+    #manage-type #add-type {
+        font-size: 13px;
+        line-height: 0;
+        padding: 10px 0;
+        width: 35%;
+        margin-top: 40px;
+    }
+
+    #manage-admin button,
+    #manage-cat #manage-cat-search-btn,
+    #manage-country #manage-country-search-btn,
+    #manage-type #manage-type-search-btn {
+        margin: 39px 0 0 -40px;
+        width: 220%;
+        padding: 15px 0;
+        font-size: 13px;
+        line-height: 0;
+    }
+
+    #manage-admin input,
+    #manage-cat input,
+    #manage-country input,
+    #manage-type input,
+    #members input {
+        height: 35px;
+        margin-left: -20px;
+    }
+
+    #manage-admin .search-icon,
+    #manage-cat .search-icon,
+    #manage-country .search-icon,
+    #manage-type .search-icon {
+        margin-top: -25px;
+        margin-right: 95%;
+    }
+
+    /* Member */
+    #members input {
+        margin: 80px 0 0 0;
+        width: 100%;
+        padding: 0 0 0 30px;
+    }
+
+    #members button {
+        margin: 80px 0 0 -20px;
+        width: 200%;
+        line-height: 0;
+        padding: 15px 0;
+        font-size: 12px;
+    }
+
+    #members .search-icon {
+        margin-top: -25px;
+        margin-right: 85%;
+    }
+
+    /* =================================
+            My Profile
+    ===================================*/
+    #my-profile input,
+    #my-profile select {
+        font-size: 14px;
+    }
+
+    #country-code {
+        padding: 3px 5px;
+        width: 150%;
+        height: 35px;
+        margin: 0 0 0 -10px;
+    }
+
+    #profile-submit {
+        font-size: 16px;
+        padding: 10px 0 30px 0;
+        width: 30%;
+    }
+
+    #country-code {
+        width: 120%;
+        margin: 0 0 0 -10px;
+    }
+
+    #profile-submit {
+        padding: 10px 0 30px 0;
+    }
+
+    /* Manage Sys Config */
+    #manage-sys-submit {
+        line-height: 0;
+        padding: 15px;
+        width: 30%;
+        font-size: 14px;
+    }
+
+    /* member details */
+    /* =================================
+            Member Info
+    ===================================*/
+    #member-info {
+        margin: 0 0 60px 0;
+    }
+
+    #member-details hr {
+        border: 0.5px solid #d1d1d1;
+        margin: -25px 0 50px 0;
+    }
+
+    #member-info h2 {
+        margin: 50px 0 20px 5px;
+    }
+
+    /* Member info left */
+    .member-left-side img {
+        height: 100px;
+        width: 100px;
+        margin: 5px 0 0 -10px;
+    }
+
+    .member-detail {
+        margin: 2px 0 0 -120px;
+    }
+
+    .member-left-side p,
+    .member-right-side p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .member-left-side span {
+        margin: 0 0 0 -20px;
+
+    }
+
+    /* Member info right */
+
+    .member-right-side span {
+        color: #6255a5;
+        margin: 0 0 0 -50px;
+        font-weight: 600;
+    }
+
+
+    /* ================ 
+        Note Details 
+    =================== */
+    /* Left Side */
+    .left-side-notes {
+        width: 450px;
+        margin-left: -10px;
+    }
+
+    #note-detail h3 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 28px;
+        margin: 60px 0 20px 0;
+    }
+
+    .left-side-notes img {
+        height: 220px;
+        width: 170px;
+        margin-left: 10px;
+    }
+
+    .left-side-notes h2 {
+        font-size: 24px;
+        margin: -5px 0 0 0;
+    }
+
+    .left-side-notes p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+    #download-price-btn button {
+        width: 170px;
+        height: 40px;
+        font-size: 16px;
+        padding: 8px 0 5px 0;
+        margin: 5px 0 0 0;
+    }
+
+    /* Right Side */
+
+    .right-side-notes {
+        margin-left: 20px;
+        width: 250px;
+    }
+
+    .right-side-notes p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .right-side-notes .col-md-6 span {
+        margin-left: -50px;
+    }
+
+    .right-side-notes .rate {
+        margin: 1px -10px 0 -90px;
+    }
+
+    #border {
+        border-bottom: 1px solid #d1d1d1;
+        margin: 60px 0 0 0;
+    }
+
+    /*Thank yoy popup*/
+    #exampleModal {
+        margin-top: 50px;
+    }
+
+    #exampleModal span {
+        margin: 0 5px 0 0;
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+    #exampleModal img {
+        margin: -30px 0 0 0;
+        height: 50px;
+        width: 50px;
+    }
+
+    .model-content {
+        padding: 30px 55px 20px 40px;
+    }
+
+    /* Notes Previews - note details */
+
+    #notes-preview {
+        margin: -40px 0 0 0;
+    }
+
+    #notes-preview h3 {
+        margin: 0 0 20px 0;
+    }
+
+    .set-margin-cicis-menu-to-go {
+        margin: 0;
+    }
+
+    .set-padding-cicis-menu-to-go {
+        padding: 0;
+    }
+
+    .set-border-cicis-menu-to-go {
+        border: 1px solid #d1d1d1;
+        width: 300px;
+        height: 440px;
+        border-radius: 3px;
+    }
+
+    .responsive-wrapper img,
+    .responsive-wrapper object,
+    .responsive-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 400%;
+
+        border-style: none;
+        padding: 20px 0 0 0;
+        margin: 0;
+    }
+
+    #Iframe-Cicis-Menu-To-Go {
+        max-width: 666.67px;
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    /* =================================
+            Customer Reviews
+    =============================*/
+
+    #customer-review .col-md-7 {
+        border: 1px solid #d1d1d1;
+        border-radius: 3px;
+        height: 400px;
+        width: 410px;
+        margin-left: 20px;
+    }
+
+    #customer-review h3 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 28px;
+        color: #6255a5;
+        margin: 0 0 20px 0;
+    }
+
+    #customer-review img {
+        height: 50px;
+        width: 50px;
+        margin: -11px 0 0 -10px;
+    }
+
+    #customer-review .row {
+        padding: 25px 20px 30px 30px;
+    }
+
+    #customer-review p {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: -15px;
+    }
+
+    #customer-review .rate {
+        margin: -3px -10px 0 -10px;
+    }
+
+    .cust-name {
+        font-size: 16px;
+        font-weight: 600;
+        margin: -10px 0 6px 0;
+    }
+
+    .border {
+        margin: 0;
+    }
+
+    .cust-2,
+    .cust-3 {
+        margin: -15px 0 0 0;
+    }
+
+    .cust-1 .col-md-10,
+    .cust-2 .col-md-10,
+    .cust-3 .col-md-10 {
+        margin-left: 0;
+    }
+
+    .cust-1 p,
+    .cust-2 p {
+        margin-bottom: -5px;
+    }
+
+    .cust-2 .col-md-10,
+    .cust-3 .col-md-10,
+    .cust-2 .col-md-2,
+    .cust-3 .col-md-2 {
+        margin-top: -20px
+    }
+
+    /* Notes Under Review */
+    #notes-under-review select {
+        width: 25%;
+        margin: 0 0 10px 0;
+    }
+
+    #notes-under-review input {
+        margin: 25px 0 0 -50px;
+        padding-left: 30px;
+    }
+
+    #notes-under-review .search-icon {
+        margin-top: -25px;
+        margin-right: 115%;
+    }
+
+    #search-btn {
+        font-size: 14px;
+        line-height: 0;
+        width: 100px;
+        padding: 15px 0;
+        margin: 25px 0 0 -70px;
+    }
+
+    table button {
+        font-size: 12px !important;
+        line-height: 20px !important;
+        width: 80px !important;
+        padding: 0 !important;
+    }
+
+    /* Publish notes */
+    #published-note select {
+        width: 25%;
+        margin: 0 0 10px 0;
+    }
+
+    #published-note input {
+        margin: 30px 0 0 -30px;
+        padding-left: 30px;
+    }
+
+    #published-note .search-icon {
+        float: right;
+        margin-top: -24px;
+        margin-right: 102%;
+        z-index: 2;
+        color: #d1d1d1;
+    }
+
+    #search-btn {
+        font-size: 14px;
+        line-height: 0;
+        width: 100px;
+        padding: 15px 0;
+        margin: 30px 0 0 -50px;
+    }
+
+    /* Rejected Notes */
+    #rejected-notes select {
+        width: 30%;
+        margin: 0 0 10px 0;
+    }
+
+    #rejected-notes input {
+        margin: 30px 0 0 -30px;
+        padding-left: 30px;
+    }
+
+    #rejected-notes #search-btn {
+        border-radius: 3px;
+        font-size: 14px;
+        line-height: 0;
+        width: 80px;
+        padding: 15px 0;
+        margin: 30px 0 0 -50px;
+    }
+
+    /* spam report */
+    #spam-report input {
+        margin: 80px 0 0 -10px;
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    #spam-report button {
+        margin: 80px 0 0 -35px;
+        width: 200%;
+        padding: 15px 0;
+        font-size: 12px;
+        line-height: 0;
+    }
+
+    #spam-report .search-icon {
+        margin-top: -24px;
+        margin-right: 90%;
+    }
+
+}
+
+/* Extra Small Devices (Landscape Phones & Portrait Tablets) */
+
+@media (max-width: 767px) {
+
+    /* Navigation */
+    .navbar {
+        padding: 20px 0;
+    }
+
+    /* Hide mobile nav open btn */
+    #mobile-nav-open-btn {
+        display: block;
+        margin-right: 20px;
+    }
+
+    /* Footer */
+    footer p,
+    footer i {
+        font-size: 13px;
+    }
+
+    ul.social-list li a {
+        height: 30px;
+        width: 30px;
+        font-size: 13px;
+        padding-bottom: 30px;
+    }
+
+    .navbar-brand img {
+        margin: 0 0 0 -50px;
+    }
+
+    /* common css */
+    .container h2 {
+        font-size: 22px !important;
+        line-height: 24px !important;
+    }
+
+    label,
+    p {
+        font-size: 13px !important;
+        line-height: 18px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .container {
+        margin-left: 10px !important;
+    }
+
+    /* =================================
+            add admin
+    ===================================*/
+    #add-admin h2 {
+        margin: 60px 0 10px 0;
+    }
+
+    #add-admin input,
+    #add-admin select,
+    #add-cat input,
+    #add-cat textarea,
+    #add-country input,
+    #add-type input,
+    #add-type textarea {
+        font-size: 13px;
+        line-height: 18px;
+        margin-bottom: 15px;
+    }
+
+    #add-admin-submit {
+        line-height: 0;
+        padding: 15px 0 !important;
+    }
+
+    #country-code {
+        padding: 3px 5px;
+        width: 100%;
+        height: 35px;
+        margin: 0 0 0 -10px;
+    }
+
+    #add-admin-submit {
+        padding: 10px 0 30px 0;
+        width: 20%;
+        font-size: 14px;
+    }
+
+    /* Add Catagory */
+    #add-cat h2,
+    #add-country h2,
+    #add-type h2 {
+        margin: 60px 0 10px 0;
+    }
+
+    #add-cat-submit,
+    #add-country-submit,
+    #add-type-submit {
+        line-height: 0;
+        padding: 15px 0;
+        width: 30%;
+        font-size: 14px;
+    }
+
+    /* Dashboard */
+    #up-side .row .col-md-4 {
+        border: 1px solid #d1d1d1;
+        padding: 30px 0px;
+        vertical-align: middle;
+        height: 120px;
+        width: 230px;
+        margin: 0 10px 10px 10px;
+    }
+
+    #published-notes h4 {
+        margin-bottom: 5px;
+    }
+
+    #published-notes input {
+        margin: 40px 0 5px 0;
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    #published-notes .search-icon {
+        margin-top: -29px;
+        margin-right: 85%;
+    }
+
+    #published-notes button {
+        margin: 39px 0 0 -21px;
+        width: 100%;
+        line-height: 0;
+        padding: 15px 0;
+        font-size: 12px;
+    }
+
+    #published-notes select {
+        margin: 38px 0 0 -45px;
+        font-size: 14px;
+        width: 150%;
+    }
+
+    /* dwnload notes */
+    #down-notes select {
+        width: 80%;
+        margin: 0 0 10px 0;
+        font-size: 13px;
+    }
+
+    #down-notes input {
+        margin: 20px 0 10px 90px;
+        width: 130%;
+        padding-left: 25px;
+    }
+
+    #down-notes #search-btn {
+        font-size: 13px;
+        line-height: 0;
+        width: 80px;
+        padding: 15px 0;
+        margin: 20px 0 0 100px;
+    }
+
+    #down-notes .search-icon {
+        margin-top: -34px;
+        margin-right: -19%;
+    }
+
+
+    /* Login */
+    .logo-login {
+        margin-top: -210px;
+        margin-left: -130px;
+    }
+
+    .loginform {
+        padding: 20px;
+        height: 350px;
+        width: 400px;
+        margin-top: -160px;
+        margin-left: -200px !important;
+    }
+
+    .loginform h4 {
+        font-size: 24px;
+        margin: 0 0 5px 0;
+        line-height: 28px;
+    }
+
+    .loginform p {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 0 10px 0;
+    }
+
+    .loginform label {
+        font-size: 13px;
+    }
+
+    .loginform input {
+        font-size: 13px;
+    }
+
+    #pass a {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 0 5px 0;
+    }
+
+    #error-msg {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        color: #FF3636;
+        margin: 8px 0 0 0;
+    }
+
+    .form-check-input {
+        width: 20px;
+        height: 20px;
+        margin: 10px 0 20px 0;
+    }
+
+    .form-check-label {
+        font-size: 13px;
+        margin-bottom: 20px;
+        margin-top: 4px;
+    }
+
+    .loginform .btn-login {
+        padding: 5px 0;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    #sign-up-text {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        margin-top: 10px;
+    }
+
+    /* Forgot Password */
+    .logo-forgotpassword {
+        margin-top: -150px;
+    }
+
+    #forgotpassword-heading h2 {
+        font-size: 22px !important;
+        margin-bottom: 0;
+    }
+
+    #forgotpassword-heading p {
+        font-size: 13px;
+        line-height: 18px;
+        margin-bottom: 10px;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    #forgotpasswordform {
+        height: 200px;
+        width: 400px;
+        margin-top: -100px;
+        margin-left: -190px !important;
+        padding: 40px;
+    }
+
+    #forgotpasswordform input {
+        font-size: 13px;
+    }
+
+    .btn-forgot-password {
+        font-size: 14px;
+        padding: 5px 0 5px 0;
+    }
+
+    /* =================================
+            Manage Admin
+    ===================================*/
+    #manage-admin h2,
+    #manage-cat h2,
+    #manage-country h2,
+    #manage-type h2 {
+        margin: 60px 0 -20px 0;
+    }
+
+    #manage-admin #add-admin,
+    #manage-cat #add-cat,
+    #manage-country #add-country,
+    #manage-type #add-type {
+        font-size: 13px;
+        line-height: 0;
+        padding: 10px 0;
+        width: 35%;
+        margin: 40px 0 10px 0;
+    }
+
+    #manage-admin button,
+    #manage-cat #manage-cat-search-btn,
+    #manage-country #manage-country-search-btn,
+    #manage-type #manage-type-search-btn {
+        margin: 40px 0 10px -40px;
+        width: 220%;
+        padding: 15px 0;
+        font-size: 12px;
+        line-height: 0;
+    }
+
+    #manage-admin input,
+    #manage-cat input,
+    #manage-country input,
+    #manage-type input,
+    #members input {
+        height: 35px;
+        margin-left: -20px;
+    }
+
+    #manage-admin .search-icon,
+    #manage-cat .search-icon,
+    #manage-country .search-icon,
+    #manage-type .search-icon {
+        margin-top: -25px;
+        margin-right: 95%;
+    }
+
+    /* Member */
+    #members input {
+        margin: 80px 0 0 0;
+        width: 100%;
+        padding: 0 0 0 30px;
+    }
+
+    #members button {
+        margin: 80px 0 0 -20px;
+        width: 200%;
+        line-height: 0;
+        padding: 15px 0;
+        font-size: 12px;
+    }
+
+    #members .search-icon {
+        margin-top: -25px;
+        margin-right: 85%;
+    }
+
+    /* =================================
+            My Profile
+    ===================================*/
+    #my-profile input,
+    #my-profile select {
+        font-size: 14px;
+    }
+
+    #country-code {
+        padding: 3px 5px;
+        width: 150%;
+        height: 35px;
+        margin: 0 0 0 -10px;
+    }
+
+    #profile-submit {
+        font-size: 16px;
+        padding: 10px 0 30px 0;
+        width: 30%;
+    }
+
+    #country-code {
+        width: 120%;
+        margin: 0 0 0 -10px;
+    }
+
+    #profile-submit {
+        line-height: 0;
+        padding: 15px 0;
+    }
+
+    /* Manage Sys Config */
+    #manage-sys-submit {
+        line-height: 0;
+        padding: 15px;
+        width: 30%;
+        font-size: 14px;
+    }
+
+    /* member details */
+    /* =================================
+            Member Info
+    ===================================*/
+    #member-info {
+        margin: 0 0 60px 0;
+    }
+
+    #member-details hr {
+        border: 0.5px solid #d1d1d1;
+        margin: -25px 0 50px 0;
+    }
+
+    #member-info h2 {
+        margin: 50px 0 20px 5px;
+    }
+
+    /* Member info left */
+    .member-left-side img {
+        height: 100px;
+        width: 100px;
+        margin: 5px 0 0 -10px;
+    }
+
+    .member-detail {
+        margin: 2px 0 0 -120px;
+    }
+
+    .member-left-side p,
+    .member-right-side p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .member-left-side span {
+        margin: 0 0 0 -20px;
+
+    }
+
+    /* Member info right */
+
+    .member-right-side span {
+        color: #6255a5;
+        margin: 0 0 0 -50px;
+        font-weight: 600;
+    }
+
+
+
+    /* ================ 
+        Note Details 
+    =================== */
+    /* Left Side */
+    .left-side-notes {
+        width: 100%;
+        margin: 0;
+    }
+
+    .left-side-notes .col-xs-7 {
+        margin: 5px 0 0 -100px;
+    }
+
+    #note-detail h3 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 28px;
+        margin: 60px 0 20px 10px;
+    }
+
+    .left-side-notes img {
+        height: 230px;
+        width: 180px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .left-side-notes h2 {
+        margin: 0 0 5px 0;
+    }
+
+    .left-side-notes p {
+        line-height: 17px;
+        margin-bottom: 15px !important;
+    }
+
+    #download-price-btn button {
+        width: 170px;
+        height: 40px;
+        font-size: 15px;
+        padding: 8px 0 5px 0;
+        margin: 10px 0 0 0;
+    }
+
+    /* Right Side */
+
+    .right-side-notes {
+        margin-left: 10px;
+        width: 100%;
+    }
+
+    .right-side-notes p {
+        font-size: 13px;
+        line-height: 24px;
+    }
+
+    .right-side-notes .col-md-6 span {
+        margin-right: 30px;
+    }
+
+    .right-side-notes .rate {
+        margin: 0 -10px 0 40px;
+    }
+
+    #border {
+        border-bottom: 1px solid #d1d1d1;
+        margin: 60px 0 0 0;
+    }
+
+    /*Thank yoy popup*/
+    #exampleModal {
+        margin-top: 100px;
+        width: 70%;
+        left: 17%;
+    }
+
+    #exampleModal span {
+        margin: 0 5px 0 0;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    #exampleModal img {
+        margin: -30px 0 0 0;
+        height: 30px;
+        width: 30px;
+    }
+
+    .model-content {
+        padding: 30px;
+    }
+
+    .model-content p {
+        font-size: 13px !important;
+    }
+
+    /* Notes Previews - note details */
+
+    #notes-preview {
+        margin: -40px 0 0 0;
+    }
+
+    #notes-preview h3 {
+        font-size: 22px;
+        margin: 0 0 20px 0;
+    }
+
+    .set-margin-cicis-menu-to-go {
+        margin: 0 0 30px 0;
+    }
+
+    .set-padding-cicis-menu-to-go {
+        padding: 0;
+    }
+
+    .set-border-cicis-menu-to-go {
+        border: 1px solid #d1d1d1;
+        width: 350px;
+        height: 320px;
+        border-radius: 3px;
+    }
+
+    .responsive-wrapper img,
+    .responsive-wrapper object,
+    .responsive-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        border-style: none;
+        padding: 20px 0 0 0;
+        margin: 0;
+    }
+
+    #Iframe-Cicis-Menu-To-Go {
+        max-width: 666.67px;
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    /* =================================
+            Customer Reviews
+    =============================*/
+
+    #customer-review .col-md-7 {
+        border: 1px solid #d1d1d1;
+        border-radius: 3px;
+        height: 100%;
+        width: 92%;
+        margin-left: 20px;
+    }
+
+    #customer-review h3 {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 28px;
+        color: #6255a5;
+        margin: 0 0 20px 20px;
+    }
+
+    #customer-review img {
+        height: 50px;
+        width: 50px;
+        margin: -5px 0 0 10px;
+    }
+
+    #customer-review .row {
+        padding: 25px 20px 30px 30px;
+    }
+
+    #customer-review p {
+        font-size: 13px;
+        line-height: 22px;
+        margin: 5px 0 0 0;
+    }
+
+    #customer-review .rate {
+        margin: -3px -10px 0 -10px;
+    }
+
+    .cust-name {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0 0 6px 0;
+    }
+
+    .border {
+        margin: 0;
+    }
+
+    .cust-2,
+    .cust-3 {
+        margin: -15px 0 0 0;
+    }
+
+    .cust-1 .col-md-10,
+    .cust-2 .col-md-10,
+    .cust-3 .col-md-10 {
+        margin-left: 0;
+    }
+
+    .cust-1 p,
+    .cust-2 p {
+        margin-bottom: -5px;
+    }
+
+    .cust-2 .col-md-10,
+    .cust-3 .col-md-10,
+    .cust-2 .col-md-2,
+    .cust-3 .col-md-2 {
+        margin-top: -20px
+    }
+
+    /* Notes Under Review */
+    #notes-under-review select {
+        width: 25%;
+        margin: 0 0 10px 0;
+    }
+
+    #notes-under-review input {
+        margin: 25px 0 5px -50px;
+        padding-left: 30px;
+    }
+
+    #notes-under-review .search-icon {
+        margin-top: -30px;
+        margin-right: 115%;
+    }
+
+    #search-btn {
+        font-size: 14px;
+        line-height: 0;
+        width: 100px;
+        padding: 15px 0;
+        margin: 25px 0 5px -70px !important;
+    }
+
+    table button {
+        font-size: 12px !important;
+        line-height: 20px !important;
+        width: 80px !important;
+        padding: 0 !important;
+    }
+
+    /* Publish notes */
+    #published-note select {
+        width: 25%;
+        margin: 0 0 10px 0;
+    }
+
+    #published-note input {
+        margin: 20px 0 5px -50px;
+        padding-left: 30px;
+    }
+
+    #published-note .search-icon {
+        float: right;
+        margin-top: -29px;
+        margin-right: 115%;
+        z-index: 2;
+        color: #d1d1d1;
+    }
+
+    #search-btn {
+        font-size: 14px;
+        line-height: 0;
+        width: 100px;
+        padding: 15px 0;
+        margin: 20px 0 0 -70px !important;
+    }
+
+    /* Rejected Notes */
+    #rejected-notes select {
+        width: 30%;
+        margin: 0 0 10px 0;
+    }
+
+    #rejected-notes input {
+        margin: 20px 0 0 -30px;
+        padding-left: 30px;
+    }
+
+    #rejected-notes #search-btn {
+        border-radius: 3px;
+        font-size: 14px;
+        line-height: 0;
+        width: 80px;
+        padding: 15px 0;
+        margin: 20px 0 0 -50px !important;
+    }
+
+    /* spam report */
+    #spam-report input {
+        margin: 70px 0 10px -10px;
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    #spam-report button {
+        margin: 70px 0 10px -35px;
+        width: 200%;
+        padding: 15px 0;
+        font-size: 12px;
+        line-height: 0;
+    }
+
+    #spam-report .search-icon {
+        margin-top: -32px;
+        margin-right: 90%;
+    }
+
+}
+
+/* Extra Small Devices (Portrait Phones & Smaller Tablets) */
+
+@media (max-width: 580px) {
+
+    /* Navigation */
+    .navbar {
+        padding: 20px 0;
+    }
+
+    /* Hide mobile nav open btn */
+    #mobile-nav-open-btn {
+        display: block;
+    }
+
+    /* Footer */
+    footer p,
+    footer i {
+        font-size: 11px;
+    }
+
+    footer p {
+        margin: 5px 0 0 -30px;
+    }
+
+    ul.social-list li:first-child {
+        margin: 0 0 0 -30px;
+    }
+
+    ul.social-list li:last-child {
+        margin-right: -50px;
+    }
+
+    ul.social-list li a {
+        height: 20px;
+        width: 25px;
+        font-size: 13px;
+        padding-bottom: 30px;
+    }
+
+    .navbar-brand img {
+        height: 30px;
+        margin: 0 0 0 -40px;
+    }
+
+    /* common css */
+    .container h2 {
+        font-size: 20px !important;
+        line-height: 22px !important;
+    }
+
+    label,
+    p {
+        font-size: 13px !important;
+        line-height: 18px !important;
+        margin-bottom: 0 !important;
+    }
+
+    table th,
+    table td {
+        font-size: 13px;
+    }
+
+    /* =================================
+            add admin
+    ===================================*/
+    #add-admin h2 {
+        margin: 60px 0 10px 0;
+    }
+
+    #add-admin input,
+    #add-admin select,
+    #add-cat input,
+    #add-cat textarea,
+    #add-country input,
+    #add-type input,
+    #add-type textarea {
+        font-size: 13px;
+        line-height: 18px;
+        margin-bottom: 15px;
+        width: 140%;
+    }
+
+    #add-admin-submit {
+        line-height: 0;
+        padding: 15px 0 !important;
+    }
+
+    #country-code {
+        padding: 3px 5px;
+        width: 250% !important;
+        height: 35px;
+        margin: 0 0 0 -10px;
+    }
+
+    #phone-add-admin {
+        margin-left: 20px !important;
+    }
+
+    #add-admin-submit {
+        padding: 10px 0 30px 0;
+        width: 25%;
+        font-size: 14px;
+    }
+
+    /* Add Catagory */
+    #add-cat h2,
+    #add-country h2,
+    #add-type h2 {
+        margin: 60px 0 10px 0;
+    }
+
+    #add-cat-submit,
+    #add-country-submit,
+    #add-type-submit {
+        line-height: 0;
+        padding: 14px 0;
+        width: 30%;
+        font-size: 13px;
+        margin: 0;
+    }
+
+    /* Dashboard */
+    #up-side .row .col-md-4 {
+        border: 1px solid #d1d1d1;
+        padding: 30px 0px;
+        vertical-align: middle;
+        height: 120px;
+        width: 150px;
+        margin: 0 5px 10px 5px;
+    }
+
+    #up-side h4 {
+        font-size: 24px;
+        line-height: 20px;
+        color: #6255a5;
+        font-weight: 700;
+        text-align: center;
+        margin: -2px 0 10px 0;
+    }
+
+    #published-notes h4 {
+        margin-bottom: 5px;
+    }
+
+    #published-notes input {
+        margin: 40px 0 5px 0;
+        width: 110%;
+        padding-left: 30px;
+    }
+
+    #published-notes .search-icon {
+        margin-top: -29px;
+        margin-right: 75%;
+    }
+
+    #published-notes button {
+        margin: 39px 0 0 -15px;
+        width: 120%;
+        line-height: 0;
+        padding: 15px 0;
+        font-size: 12px;
+    }
+
+    #published-notes select {
+        margin: 38px 0 0 -25px;
+        font-size: 12px;
+        width: 150%;
+    }
+
+    /* dwnload notes */
+    #down-notes .col-xs-3 {
+        margin-right: -40px;
+    }
+
+    #down-notes select {
+        width: 80%;
+        margin: 0 0 10px 0;
+        font-size: 12px;
+    }
+
+    #down-notes input {
+        margin: 20px 0 10px 30px;
+        width: 190%;
+        padding-left: 25px;
+    }
+
+    #down-notes #search-btn {
+        font-size: 12px;
+        line-height: 0;
+        width: 80px;
+        padding: 15px 0;
+        margin: 20px 0 0 50px !important;
+    }
+
+    #down-notes .search-icon {
+        margin-top: -34px;
+        margin-right: -5%;
+    }
+
+
+    /* Login */
+    .logo-login img {
+        height: 30px;
+    }
+
+    .logo-login {
+        margin-top: -200px;
+        margin-left: -100px;
+    }
+
+    .loginform {
+        padding: 20px;
+        height: 330px;
+        width: 300px;
+        margin-top: -160px;
+        margin-left: -150px !important;
+    }
+
+    .loginform h4 {
+        font-size: 18px;
+        margin: 0 0 5px 0;
+        line-height: 24px;
+    }
+
+    .loginform p {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        margin: 0 0 10px 0;
+    }
+
+    .loginform label {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .loginform input {
+        font-size: 12px;
+        height: 30px;
+    }
+
+    #pass a {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0;
+    }
+
+    #error-msg {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        color: #FF3636;
+        margin: 5px 0 -10px 0;
+    }
+
+    .form-check-input {
+        width: 15px;
+        height: 15px;
+        margin: 0 !important;
+        position: relative;
+    }
+
+    .form-check-label {
+        font-size: 12px;
+        line-height: 0;
+        margin: -30px 0 0 30px !important;
+        position: absolute;
+    }
+
+    .loginform .btn-login {
+        padding: 5px 0;
+        margin: 0;
+        font-size: 12px;
+    }
+
+    #sign-up-text {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        margin-top: 5px;
+    }
+
+    /* Forgot Password */
+    .logo-forgotpassword img {
+        height: 30px;
+    }
+
+    .logo-forgotpassword {
+        margin-top: -140px;
+        margin-left: -100px;
+    }
+
+    #forgotpassword-heading h2 {
+        font-size: 18px !important;
+        margin-bottom: 0;
+    }
+
+    #forgotpassword-heading p {
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 5px;
+    }
+
+    .form-group label {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+    #forgotpasswordform {
+        height: 190px;
+        width: 300px;
+        margin-top: -100px;
+        margin-left: -150px !important;
+        padding: 30px;
+    }
+
+    #forgotpasswordform input {
+        font-size: 12px;
+        height: 30px;
+    }
+
+    .btn-forgot-password {
+        font-size: 13px;
+        padding: 5px 0 5px 0;
+    }
+
+    /* =================================
+            Manage Admin
+    ===================================*/
+    #manage-admin h2,
+    #manage-cat h2,
+    #manage-country h2,
+    #manage-type h2 {
+        margin: 60px 0 -20px 0;
+    }
+
+    #manage-admin #add-admin,
+    #manage-cat #add-cat,
+    #manage-country #add-country,
+    #manage-type #add-type {
+        font-size: 12px;
+        line-height: 0;
+        padding: 10px 0;
+        width: 50%;
+        margin: 40px 0 10px 0;
+    }
+
+    #manage-admin button,
+    #manage-cat #manage-cat-search-btn,
+    #manage-country #manage-country-search-btn,
+    #manage-type #manage-type-search-btn {
+        margin: 40px 0 10px -50px;
+        width: 600%;
+        padding: 15px 0;
+        font-size: 12px;
+        line-height: 0;
+    }
+
+    #manage-admin input,
+    #manage-cat input,
+    #manage-country input,
+    #manage-type input,
+    #members input {
+        height: 35px;
+        margin-left: -40px;
+        width: 110%;
+        padding-left: 25px;
+    }
+
+    #manage-admin .search-icon,
+    #manage-cat .search-icon,
+    #manage-country .search-icon,
+    #manage-type .search-icon {
+        margin-top: -25px;
+        margin-right: 120%;
+    }
+
+    /* Member */
+    #members input {
+        margin: 80px 0 0 -40px;
+        width: 120%;
+        padding: 0 0 0 30px;
+    }
+
+    #members button {
+        margin: 80px 0 0 -45px;
+        width: 650%;
+        line-height: 0;
+        padding: 15px 0;
+        font-size: 12px;
+    }
+
+    #members .search-icon {
+        margin-top: -25px;
+        margin-right: 115%;
+    }
+
+    /* =================================
+            My Profile
+    ===================================*/
+    #my-profile input,
+    #my-profile select {
+        font-size: 14px;
+        width: 130%;
+    }
+
+    #country-code {
+        padding: 3px 5px;
+        width: 130% !important;
+        height: 35px;
+        margin: 0 0 0 -10px;
+    }
+    
+    #phone-my-profile {
+        width: 140% !important;
+    }
+
+    #profile-submit {
+        font-size: 16px;
+        padding: 10px 0 30px 0;
+        width: 30%;
+    }
+
+    #country-code {
+        width: 120%;
+        margin: 0 0 0 -10px;
+    }
+
+    #profile-submit {
+        line-height: 0;
+        padding: 15px 0;
+    }
+
+    /* Manage Sys Config */
+    #manage-sys-config input,
+    #img-upload {
+        font-size: 12px;
+        width: 120%;
+    }
+
+    #manage-sys-submit {
+        line-height: 0;
+        padding: 15px;
+        width: 30%;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    /* member details */
+    /* =================================
+            Member Info
+    ===================================*/
+    #member-info {
+        margin: 0 0 60px 0;
+    }
+
+    #member-details hr {
+        border: 0.5px solid #d1d1d1;
+        margin: -25px 0 50px 0;
+    }
+
+    #member-info h2 {
+        margin: 50px 0 20px 5px;
+    }
+
+    /* Member info left */
+    .member-left-side img {
+        height: 80px;
+        width: 80px;
+        margin: 5px 0 0 -8px;
+    }
+    
+    .member-detail {
+        margin: 2px -150px 0 -50px;
+    }
+
+    .member-left-side span {
+        margin: 0;
+
+    }
+
+    /* Member info right */
+    .member-right-side {
+        margin: 130px 0 0 -190px;
+    }
+
+    .member-right-side span {
+        color: #6255a5;
+        margin: 0 0 0 -35px;
+        font-weight: 600;
+    }
+
+
+
+    /* ================ 
+        Note Details 
+    =================== */
+    /* Left Side */
+    .left-side-notes {
+        width: 100%;
+        margin: 0;
+    }
+
+    .left-side-notes .col-xs-7 {
+        margin-left: -20px;
+    }
+
+    #note-detail h3 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        margin: 60px 0 10px 5px;
+    }
+
+    .left-side-notes img {
+        height: 200px;
+        width: 140px;
+        margin-left: 5px;
+        margin-bottom: 20px;
+    }
+
+    .left-side-notes h2 {
+        font-size: 16px !important;
+        margin: 0 0 5px 0 !important;
+        line-height: 20px;
+    }
+
+    .left-side-notes p {
+        font-size: 11px;
+        line-height: 15px;
+        margin: 0 0 5px 0 !important;
+    }
+
+    #download-price-btn button {
+        width: 120px;
+        height: 30px;
+        font-size: 12px;
+        line-height: 0;
+        padding: 5px 0;
+        margin: 0;
+    }
+
+    /* Right Side */
+
+    .right-side-notes {
+        margin-left: 5px;
+        width: 100%;
+    }
+
+    .right-side-notes p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .right-side-notes .col-md-6 span {
+        margin-right: 0;
+    }
+
+    .right-side-notes .rate {
+        margin: 0 -10px 0 -50px;
+    }
+
+    #border {
+        border-bottom: 1px solid #d1d1d1;
+        margin: 50px 0 -50px 0;
+    }
+
+    /*Thank yoy popup*/
+    #exampleModal {
+        margin-top: 100px;
+        width: 80%;
+        left: 12%;
+    }
+
+    .model-data h2 {
+        margin: 0;
+    }
+
+    #exampleModal span {
+        margin: 0 5px 0 0;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    #exampleModal img {
+        margin: -30px 0 0 0;
+        height: 20px;
+        width: 20px;
+    }
+
+    .model-content {
+        padding: 20px;
+    }
+
+    .model-content p {
+        font-size: 12px !important;
+        margin: 5px 0 0 0;
+    }
+
+    /* Notes Previews - note details */
+
+    #notes-preview {
+        margin: -40px 0 0 0;
+    }
+
+    #notes-preview h3 {
+        font-size: 18px;
+        margin: 0 0 10px 0;
+    }
+
+    .set-margin-cicis-menu-to-go {
+        margin: 0 0 30px 0;
+    }
+
+    .set-padding-cicis-menu-to-go {
+        padding: 0;
+    }
+
+    .set-border-cicis-menu-to-go {
+        border: 1px solid #d1d1d1;
+        width: 350px;
+        height: 320px;
+        border-radius: 3px;
+    }
+
+    .responsive-wrapper img,
+    .responsive-wrapper object,
+    .responsive-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 95%;
+        height: 100%;
+
+        border-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #Iframe-Cicis-Menu-To-Go {
+        max-width: 666.67px;
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    /* =================================
+            Customer Reviews
+    =============================*/
+
+    #customer-review .col-md-7 {
+        border: 1px solid #d1d1d1;
+        border-radius: 3px;
+        height: 100%;
+        width: 92%;
+        margin-left: 10px;
+    }
+
+    #customer-review h3 {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 28px;
+        color: #6255a5;
+        margin: 0 0 20px 20px;
+    }
+
+    #customer-review img {
+        height: 40px;
+        width: 40px;
+        margin: 0;
+    }
+
+    #customer-review .row {
+        padding: 25px;
+    }
+
+    #customer-review p {
+        font-size: 12px;
+        line-height: 22px;
+        margin: 5px 0 0 0;
+    }
+
+    #customer-review .rate {
+        margin: -3px -10px 0 -10px;
+    }
+
+    .cust-name {
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0 0 6px 0;
+    }
+
+    .border {
+        margin: 0;
+    }
+
+    .cust-2,
+    .cust-3 {
+        margin: -15px 0 0 0;
+    }
+
+    .cust-1 .col-md-10,
+    .cust-2 .col-md-10,
+    .cust-3 .col-md-10 {
+        margin-left: 0;
+    }
+
+    .cust-1 p,
+    .cust-2 p {
+        margin-bottom: -5px;
+    }
+
+    .cust-2 .col-md-10,
+    .cust-3 .col-md-10,
+    .cust-2 .col-md-2,
+    .cust-3 .col-md-2 {
+        margin-top: 0;
+    }
+
+    /* Notes Under Review */
+    #notes-under-review select {
+        width: 40%;
+        margin: 0 0 10px 0;
+    }
+
+    #notes-under-review input {
+        margin: 20px 0 5px -80px;
+        padding-left: 30px;
+        width: 130%;
+    }
+
+    #notes-under-review .search-icon {
+        margin-top: -29px;
+        margin-right: 165%;
+    }
+
+    #search-btn {
+        font-size: 12px !important;
+        line-height: 0;
+        width: 90px !important;
+        padding: 15px 0;
+        margin: 25px 0 5px -90px !important;
+    }
+
+    table button {
+        font-size: 12px !important;
+        line-height: 20px !important;
+        width: 80px !important;
+        padding: 0 !important;
+    }
+
+    /* Publish notes */
+    #published-note select {
+        width: 40%;
+        margin: 0 0 10px 0;
+    }
+
+    #published-note input {
+        margin: 20px 0 5px -80px;
+        padding-left: 30px;
+        width: 130%;
+    }
+
+    #published-note .search-icon {
+        margin-top: -29px;
+        margin-right: 165%;
+    }
+
+    #search-btn {
+        font-size: 14px;
+        line-height: 0;
+        width: 100px;
+        padding: 15px 0;
+        margin: 20px 0 0 -75px !important;
+    }
+
+    /* Rejected Notes */
+    #rejected-notes select {
+        width: 50%;
+        margin: 0 0 10px 0;
+    }
+
+    #rejected-notes input {
+       margin: 20px 0 5px -80px;
+        padding-left: 30px;
+        width: 130%;
+    }
+    
+    #rejected-notes .search-icon {
+        margin-top: -29px;
+        margin-right: 165%;
+    }
+
+    #rejected-notes #search-btn {
+        font-size: 14px;
+        line-height: 0;
+        width: 100px;
+        padding: 15px 0;
+        margin: 20px 0 0 -75px !important;
+    }
+
+    /* spam report */
+    #spam-report input {
+        margin: 70px 0 10px -50px;
+        width: 120%;
+        padding-left: 30px;
+    }
+
+    #spam-report button {
+        margin: 70px 0 10px -50px;
+        width: 700%;
+        padding: 15px 0;
+        font-size: 12px;
+        line-height: 0;
+    }
+
+    #spam-report .search-icon {
+        margin-top: -35px;
+        margin-right: 130%;
+    }
+
+}
