@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- important meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>My Rejected Notes</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/Content/img/favicon/favicon.ico">
+
+    <!-- google fonts --->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="~/Content/css/font-awesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/css/bootstrap/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Content/css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/Content/css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-fixed-top white-nav-top">
+            <div class="container-fluid">
+                <div class="site-nav-wrapper">
+                    <div class="navbar-header">
+
+                        <!-- Mobile Menu Open Button -->
+                        <span id="mobile-nav-open-btn">&#9776;</span>
+
+                        <!-- logo -->
+                        <a href="#" class="navbar-brand">
+                            <img src="~/Content/img/home/logo.png" alt="logo" id="logo-img">
+                        </a>
+                    </div>
+
+                    <!-- Main Menu -->
+                    <div class="container" id="main-menu">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav pull-right">
+                                <li>@Html.ActionLink("Search Notes", "SearchNotes", "pages", null, new { @class = "smooth-scroll" })</li>
+                                <li>@Html.ActionLink("Sell Your Notes", "AddNotes", "pages", null, new { @class = "smooth-scroll" })</li>
+                                <li>@Html.ActionLink("Buyer Request", "BuyerRequest", "pages", null, new { @class = "smooth-scroll" })</li>
+                                <li>@Html.ActionLink("FAQ", "Faq", "pages", null, new { @class = "smooth-scroll" })</li>
+                                <li>@Html.ActionLink("Contact Us", "ContactUs", "pages", null, new { @class = "smooth-scroll" })</li>
+                                <li><a href="#" class="u-img"><img src="~/Content/img/Customer/cust-1.jpg" alt="user" class="img-circle" id="user-image-add-notes"></a></li>
+                                <li>@Html.ActionLink("LOGOUT", "LogIn", "pages", null, new { @class = "smooth-scroll", @id = "navigation-login-btn" })</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Menu -->
+                    <div id="mobile-nav">
+                        <span id="mobile-nav-close-btn">&times;</span>
+
+                        <div id="mobile-nav-content">
+                            <ul class="nav">
+                                <li>@Html.ActionLink("Search Notes", "SearchNotes", "pages", null, new { @class = "smooth-scroll" })</li>
+                                <li>@Html.ActionLink("Sell Your Notes", "AddNotes", "pages", null, new { @class = "smooth-scroll" })</li>
+                                <li>@Html.ActionLink("FAQ", "Faq", "pages", null, new { @class = "smooth-scroll" })</li>
+                                <li>@Html.ActionLink("Contact Us", "ContactUs", "pages", null, new { @class = "smooth-scroll" })</li>
+                                <li>@Html.ActionLink("LOGIN", "LogIn", "pages")</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Ends -->
+
+    <!-- My Rejected Notes -->
+    <section id="my-rejected-notes">
+        <div class="content-box-md">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-5">
+                        <h3>My Rejected Notes</h3>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-4">
+                        <input type="search" class="form-control" id="search-publish-note" placeholder="Search">
+                        <span class="fa fa-fw fa-search search-icon"></span>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <div id="reject-notes-search-btn" class="text-right">
+                            <a class="btn btn-general btn-purple" href="#" title="Search" role="button">Search</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">SR NO.</th>
+                                    <th>NOTE TITLE</th>
+                                    <th>CATOGORY</th>
+                                    <th>REMAKE</th>
+                                    <th>CLONE</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td><span>Data Science</span></td>
+                                    <td>Science</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Clone</td>
+                                    <td>
+                                        <div class="userprofile-user-icon dropdown">
+                                            <a role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                                            <div class="dropdown-menu dropdown-toggle" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="#">Download Note</a><br>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2</td>
+                                    <td><span>Accounts</span></td>
+                                    <td>Commerce</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Clone</td>
+                                    <td>
+                                        <div class="userprofile-user-icon dropdown">
+                                            <a role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                                            <div class="dropdown-menu dropdown-toggle" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="#">Download Note</a><br>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">3</td>
+                                    <td><span>Social Studies</span></td>
+                                    <td>Social</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Clone</td>
+                                    <td>
+                                        <div class="userprofile-user-icon dropdown">
+                                            <a role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                                            <div class="dropdown-menu dropdown-toggle" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="#">Download Note</a><br>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">4</td>
+                                    <td><span>AI</span></td>
+                                    <td>IT</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Clone</td>
+                                    <td>
+                                        <div class="userprofile-user-icon dropdown">
+                                            <a role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                                            <div class="dropdown-menu dropdown-toggle" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="#">Download Note</a><br>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">5</td>
+                                    <td><span>Lorem ipsum</span></td>
+                                    <td>Lorem</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Clone</td>
+                                    <td>
+                                        <div class="userprofile-user-icon dropdown">
+                                            <a role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                                            <div class="dropdown-menu dropdown-toggle" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="#">Download Note</a><br>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">6</td>
+                                    <td><span>Data Science</span></td>
+                                    <td>Science</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Clone</td>
+                                    <td>
+                                        <div class="userprofile-user-icon dropdown">
+                                            <a role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                                            <div class="dropdown-menu dropdown-toggle" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="#">Download Note</a><br>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">7</td>
+                                    <td><span>Accounts</span></td>
+                                    <td>Commerce</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Clone</td>
+                                    <td>
+                                        <div class="userprofile-user-icon dropdown">
+                                            <a role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                                            <div class="dropdown-menu dropdown-toggle" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="#">Download Note</a><br>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">8</td>
+                                    <td><span>Social Studies</span></td>
+                                    <td>Social</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Clone</td>
+                                    <td>
+                                        <div class="userprofile-user-icon dropdown">
+                                            <a role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                                            <div class="dropdown-menu dropdown-toggle" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="#">Download Note</a><br>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">9</td>
+                                    <td><span>AI</span></td>
+                                    <td>IT</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Clone</td>
+                                    <td>
+                                        <div class="userprofile-user-icon dropdown">
+                                            <a role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                                            <div class="dropdown-menu dropdown-toggle" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="#">Download Note</a><br>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">10</td>
+                                    <td><span>Lorem ipsum</span></td>
+                                    <td>Lorem</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Clone</td>
+                                    <td>
+                                        <div class="userprofile-user-icon dropdown">
+                                            <a role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                                            <div class="dropdown-menu dropdown-toggle" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="#">Download Note</a><br>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <nav>
+                            <div class="container text-center">
+                                <div class="row justify-content-center">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="fa fa-angle-left"></i></a>
+                                        </li>
+                                        <li class="page-item selected"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="fa fa-angle-right"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Download Ends -->
+
+    <!-- Footer -->
+    <footer class="text-left">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-sm-9">
+                    <p>copyright &copy; Tatvasoft All rights reserved.</p>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <ul class="social-list text-center">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <!-- JQuery -->
+    <script src="~/Scripts/js/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="~/Scripts/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- PopUp JS -->
+    <script src="~/Scripts/js/popup/popper.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="~/Scripts/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,2013 @@
+/* =================================
+    Default Theme
+    --------------------------------
+    Fonts: Open Sans
+    --------------------------------
+    Colors : 
+        Jet :    #333333
+        Liberty: #6255a5
+        Light Gray: #d1d1d1
+        White: #fff
+        Black: #000
+===================================*/
+
+/* =================================
+            Html, Body
+===================================*/
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    color: #333333;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+section {
+    background: #fff;
+    overflow: hidden;
+}
+
+/* =================================
+            Preloader
+===================================*/
+
+#preloader {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+#status {
+    background-image: url("../img/preloader/preloader.gif");
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+/* =================================
+            Navigation
+===================================*/
+
+.navbar-header {
+    margin-left: 8%;
+}
+
+.navbar {
+    padding: 35px 0 20px 0;
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+
+#logo-head {
+    font-size: 26px;
+    margin: -30px 0 0 40px;
+}
+
+#logo-text {
+    font-size: 17px;
+    font-weight: 200;
+    margin: 7px 0 0 40px;
+}
+
+#logo-head,
+#logo-text {
+    color: #fff;
+    line-height: 13px;
+}
+
+#main-menu a {
+    color: #fff;
+}
+
+ul.navbar-nav > li > a {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+ul.navbar-nav > li > a:hover,
+ul.navbar-nav > li > a:focus {
+    background: none;
+    border-bottom: 3px solid #6255a5;
+}
+
+#navigation-login-btn {
+    background: #fff;
+    height: 30px;
+    width: 89px;
+    color: #6255a5 !important;
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    padding: 5px;
+    margin: 11px 0 0 16px;
+}
+
+#navigation-login-btn:hover,
+#navigation-login-btn:focus {
+    background: #6255a5;
+    color: #fff !important;
+    transition: all 300ms linear;
+}
+
+/* White Navigation Bar */
+
+.white-nav-top {
+    background: #fff;
+    padding: 10px 0;
+    -webkit-box-shadow: 0 8px 6px -9px #999;
+    box-shadow: 0 8px 6px -9px #999;
+    z-index: 2;
+}
+
+.white-nav-top img {
+    margin: -8px 0 0 2px;
+}
+
+.white-nav-top ul.navbar-nav > li > a {
+    color: #333333 !important;
+}
+
+.white-nav-top ul.navbar-nav > li > a#navigation-login-btn {
+    background: #6255a5;
+    height: 30px;
+    width: 89px;
+    color: #fff !important;
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    padding: 4px;
+    margin: 11px 0 0 16px;
+}
+
+.white-nav-top ul.navbar-nav > li > a:hover,
+.white-nav-top ul.navbar-nav > li > a:focus {
+    background: none;
+}
+
+.white-nav-top ul.navbar-nav > li > a#navigation-login-btn:hover,
+.white-nav-top ul.navbar-nav > li > a#navigation-login-btn:focus {
+    background: #333333;
+    color: #fff !important;
+    transition: all 300ms linear;
+}
+
+.white-nav-top ul.navbar-nav > li.r-tabs-state-active a {
+    color: #6255a5;
+    font-weight: 700;
+    border-bottom: 3px solid #6255a5;
+    padding-bottom: 5px;
+    -webkit-transition: border-color 300ms linear;
+    transition: border-color 300ms linear;
+}
+
+#user-image {
+    width: 40px;
+    height: 40px;
+    margin: -10px 0 0 0;
+}
+
+/* =================================
+        Buttom Navigation
+===================================*/
+
+.pagination {
+    margin-bottom: 60px;
+}
+
+.pagination li a {
+    color: #333333;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 5px;
+    border: none;
+}
+
+.pagination .selected a {
+    background: #6255a5;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 50%;
+    line-height: 20px;
+}
+
+/* =================================
+            Button
+===================================*/
+
+.btn-general {
+    color: #fff;
+    width: 172px;
+    height: 30px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all .5s;
+}
+
+.btn-home {
+    line-height: 22px;
+    border: 2px solid #fff;
+    padding: 16px 10px 35px 10px;
+}
+
+.btn-home:hover,
+.btn-home:focus {
+    color: #6255a5;
+    background-color: #fff;
+}
+
+.btn-purple {
+    line-height: 22px;
+    border: 2px solid #6255a5;
+    padding: 16px 10px 35px 10px;
+    background: #6255a5;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+
+.btn-purple:hover,
+.btn-purple:focus {
+    color: #fff;
+    background: #333333;
+    border-color: #333333;
+}
+
+
+.btn-primary {
+    background: #6255a5;
+    color: #fff !important;
+    font-weight: 600;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: #333333;
+    transition: all 300ms linear;
+
+}
+
+/* =================================
+            Content Boxes
+===================================*/
+
+.content-box-lg {
+    padding: 60px 0;
+}
+
+.content-box-md {
+    padding: 60px 0;
+}
+
+/* =================================
+                Table
+===================================*/
+table {
+    border: 1px solid #d1d1d1;
+    margin: 10px 0 0 0;
+}
+
+table th,
+table td {
+    height: 50px;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+table tr:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* =================================
+            Horizontal Heading
+===================================*/
+
+.horizontal-heading h5 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+    word-spacing: 9px;
+    display: inline-block;
+    position: relative;
+    left: -63px;
+}
+
+.container h2 {
+    margin: -20px 0 20px 0;
+    font-size: 34px;
+    font-weight: 600;
+    color: #6255a5;
+    line-height: 38px;
+}
+
+/* =================================
+        Common for all basic Tag
+===================================*/
+
+label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 0 5px 0;
+}
+
+form .form-control {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+}
+
+Input[type=file]::-webkit-file-upload-button {
+    opacity: 0;
+    z-index: 99999;
+}
+
+Input[type=file] {
+    border: 1px solid #d1d1d1;
+    padding: 10px 0 0 0;
+    height: 110px;
+    width: 100%;
+    color: transparent;
+}
+
+#img-upload-profile p {
+    color: #d1d1d1;
+}
+
+/* =================================
+                footer
+===================================*/
+
+footer {
+    padding: 30px;
+    border-top: 0.5px solid #d1d1d1;
+    width: 100%;
+}
+
+footer p {
+    line-height: 20px;
+}
+
+/* =================================
+                Rating
+===================================*/
+.rate {
+    float: left;
+    height: 20px;
+    padding: 0 10px;
+    margin: 0 0 0 10px;
+}
+
+.rate:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate:not(:checked) > label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 20px;
+    color: #d1d1d1;
+}
+
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+#searched-books .rate {
+    margin: 14px 0 0 0;
+}
+
+/* ========================================
+        Common Background Img For
+        Login, Reset Password, 
+        Forgot Password, Email Send
+==========================================*/
+
+#common-bg-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background: no-repeat;
+    margin: 0 auto;
+    background-attachment: fixed;
+}
+
+/* =================================
+            Login
+===================================*/
+
+#login {
+    background: none;
+    height: 100%;
+    width: 100%;
+}
+
+/* =================================
+            Login Form
+===================================*/
+
+.logo-login {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -250px;
+    margin-left: -125px;
+}
+
+.loginform {
+    top: 50%;
+    left: 50%;
+    padding: 50px;
+    height: 500px;
+    width: 500px;
+    border-radius: 4px;
+    margin-top: -200px;
+    margin-left: -250px;
+    position: absolute;
+    background: #fff;
+}
+
+.loginform h4 {
+    font-size: 34px;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+}
+
+.loginform p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    margin: 0 0 20px 0;
+}
+
+#pass a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 0 5px 0;
+}
+
+.field-icon {
+    float: right;
+    margin-top: -23px;
+    margin-right: 15px;
+    z-index: 2;
+}
+
+#error-msg {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #FF3636;
+    margin: 8px 0 0 0;
+}
+
+.loginform a {
+    color: #6255a5;
+}
+
+.form-check-input {
+    border: 1px solid #d1d1d1;
+    width: 30px;
+    height: 30px;
+    margin: 20px 0 30px 0;
+    border-radius: 3px;
+}
+
+.form-check-label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 8px 0 30px 8px;
+}
+
+#sign-up-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 20px;
+}
+
+/* =================================
+        Forgot Password Form
+===================================*/
+
+.logo-forgotpassword {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -180px;
+    margin-left: -125px;
+}
+
+#forgotpasswordform {
+    height: 300px;
+    width: 500px;
+    padding: 50px;
+    border-radius: 4px;
+    position: absolute;
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    margin-top: -130px;
+    margin-left: -250px;
+}
+
+#forgotpassword-heading h2 {
+    margin-bottom: 10px;
+}
+
+#forgotpassword-heading p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-bottom: 30px;
+}
+
+/* =================================
+            Dashboard
+===================================*/
+
+#dashboard h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 38px;
+    margin: 75px 0 10px 0;
+    color: #6255a5;
+}
+
+#up-side .row .col-md-4 {
+    border: 1px solid #d1d1d1;
+    padding: 30px 0px;
+    vertical-align: middle;
+    height: 120px;
+    width: 360px;
+    margin: 0 0 10px 20px;
+}
+
+#up-side p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    margin: 0;
+}
+
+#up-side h4 {
+    font-size: 26px;
+    line-height: 20px;
+    color: #6255a5;
+    font-weight: 700;
+    text-align: center;
+    margin: -2px 0 10px 0;
+}
+
+
+/* Published Notes */
+
+#published-notes h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #6255a5;
+    margin: 50px 0 0 0;
+}
+
+#published-notes input {
+    margin: 40px 0 0 0;
+    width: 100%;
+    padding-left: 33px;
+}
+
+#published-notes .search-icon {
+    float: right;
+    margin-top: -23px;
+    margin-right: 90%;
+    z-index: 2;
+    color: #d1d1d1;
+}
+
+#published-notes button {
+    margin: 38px 0 0 -10px;
+    width: 120%;
+    padding: 6px 10px 27px 10px;
+    font-size: 14px;
+}
+
+#published-notes select {
+    margin: 38px 0 0 -10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #8a8a8a !important;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    width: 100%
+}
+
+
+/* =================================
+            My Profile
+===================================*/
+#my-profile h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+    margin: 50px 0 20px 0;
+}
+
+#my-profile input,
+#my-profile select {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #8a8a8a !important;
+    margin: 0 0 30px 0;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+}
+
+#country-code {
+    padding: 3px 5px;
+    width: 120%;
+    height: 35px;
+    margin: 0 0 0 -10px;
+}
+
+#profile-submit {
+    padding: 10px 0 30px 0;
+}
+
+#country-code {
+    padding: 3px 5px;
+    width: 120%;
+    height: 35px;
+    margin: 0 0 0 -10px;
+}
+
+.upload-image {
+    position: relative;
+}
+
+#img-upload-profile,
+#img-upload-add-notes,
+#img-upload-notes-review,
+#img-upload-file {
+    position: absolute;
+    left: 35%;
+    top: 20%;
+}
+
+#profile-submit {
+    padding: 10px 0 30px 0;
+}
+
+/* =================================
+            add admin
+===================================*/
+#add-admin h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+    margin: 50px 0 20px 0;
+}
+
+#add-admin input,
+#add-admin select {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #8a8a8a !important;
+    margin: 0 0 30px 0;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+}
+
+
+#country-code {
+    padding: 3px 5px;
+    width: 120%;
+    height: 35px;
+    margin: 0 0 0 -10px;
+}
+
+#add-admin-submit {
+    padding: 10px 0 30px 0;
+    width: 20%;
+}
+
+/* =================================
+            Manage Admin
+===================================*/
+#manage-admin h2 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+    margin: 70px 0 -10px 0;
+}
+
+#manage-admin #add-admin {
+    font-size: 16px;
+    padding: 7px 10px 27px 10px;
+    width: 28%;
+    margin-bottom: -50px;
+    margin-left: 1px;
+}
+
+#manage-admin button {
+    margin: 38px 0 0 -20px;
+    width: 130%;
+    padding: 6px 10px 27px 10px;
+    font-size: 14px;
+}
+
+#manage-admin input {
+    margin: 40px 0 0 0;
+    width: 100%;
+    padding-left: 33px;
+}
+
+#manage-admin .search-icon {
+    float: right;
+    margin-top: -23px;
+    margin-right: 90%;
+    z-index: 2;
+    color: #d1d1d1;
+}
+
+#manage-admin .fa-trash {
+    font-size: 20px;
+    color: #d1d1d1;
+    margin: 0 0 0 20px;
+}
+
+/* =================================
+            Manage Category
+===================================*/
+#manage-cat h2 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+    margin: 70px 0 -10px 0;
+}
+
+#manage-cat #add-cat {
+    margin: 38px 0 0 0;
+    width: 130%;
+    padding: 6px 10px 27px 10px;
+    font-size: 14px;
+}
+
+#manage-cat #manage-cat-search-btn {
+    margin: 38px 0 0 -20px;
+    width: 130%;
+    padding: 6px 10px 27px 10px;
+    font-size: 14px;
+}
+
+#manage-cat input {
+    margin: 40px 0 0 0;
+    width: 100%;
+    padding-left: 33px;
+}
+
+#manage-cat .search-icon {
+    float: right;
+    margin-top: -23px;
+    margin-right: 90%;
+    z-index: 2;
+    color: #d1d1d1;
+}
+
+#manage-cat .fa-trash {
+    font-size: 20px;
+    color: #d1d1d1;
+    margin: 0 0 0 20px;
+}
+
+/* =================================
+            Manage Country
+===================================*/
+#manage-country h2 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+    margin: 70px 0 -10px 0;
+}
+
+#manage-country #add-country {
+    font-size: 16px;
+    padding: 7px 10px 27px 10px;
+    width: 20%;
+    margin-bottom: -50px;
+    margin-left: 1px;
+}
+
+#manage-country #manage-country-search-btn {
+    margin: 38px 0 0 -20px;
+    width: 130%;
+    padding: 6px 10px 27px 10px;
+    font-size: 14px;
+}
+
+#manage-country input {
+    margin: 40px 0 0 0;
+    width: 100%;
+    padding-left: 33px;
+}
+
+#manage-country .search-icon {
+    float: right;
+    margin-top: -23px;
+    margin-right: 90%;
+    z-index: 2;
+    color: #d1d1d1;
+}
+
+#manage-country .fa-trash {
+    font-size: 20px;
+    color: #d1d1d1;
+    margin: 0 0 0 20px;
+}
+
+/* =================================
+            Manage Type
+===================================*/
+#manage-type h2 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+    margin: 70px 0 -10px 0;
+}
+
+#manage-type #add-type {
+    font-size: 16px;
+    padding: 7px 10px 27px 10px;
+    width: 20%;
+    margin-bottom: -50px;
+    margin-left: 1px;
+}
+
+#manage-type #manage-type-search-btn {
+    margin: 38px 0 0 -20px;
+    width: 130%;
+    padding: 6px 10px 27px 10px;
+    font-size: 14px;
+}
+
+#manage-type input {
+    margin: 40px 0 0 0;
+    width: 100%;
+    padding: 0 0 0 30px;
+}
+
+#manage-type .search-icon {
+    float: right;
+    margin-top: -23px;
+    margin-right: 90%;
+    z-index: 2;
+    color: #d1d1d1;
+}
+
+#manage-type .fa-trash {
+    font-size: 20px;
+    color: #d1d1d1;
+    margin: 0 0 0 20px;
+}
+
+/* =================================
+            add Type
+===================================*/
+#add-type h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+    margin: 50px 0 20px 0;
+}
+
+#add-type input,
+#add-type textarea {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #8a8a8a !important;
+    margin: 0 0 30px 0;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+}
+
+#add-type-submit {
+    padding: 10px 0 30px 0;
+}
+
+#add-type textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+}
+
+/* =================================
+            Members
+===================================*/
+
+#members h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+    margin: 80px 0 0 0;
+}
+
+#members input {
+    margin: 80px 0 0 0;
+    width: 100%;
+    padding: 0 0 0 30px;
+}
+
+#members button {
+    margin: 80px 0 0 -20px;
+    width: 130%;
+    padding: 6px 10px 27px 10px;
+    font-size: 14px;
+}
+
+#members .search-icon {
+    float: right;
+    margin-top: -24px;
+    margin-right: 88%;
+    z-index: 2;
+    color: #d1d1d1;
+}
+
+/* =================================
+            Member Info
+===================================*/
+#member-info {
+    margin: 0 0 60px 0;
+}
+
+#member-details hr {
+    border: 0.5px solid #d1d1d1;
+    margin: -25px 0 50px 0;
+}
+
+#member-info h2 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #6255a5;
+    margin: 50px 0 20px 25px;
+}
+
+/* Member info left */
+.member-left-side:last-child {
+    border-right: 1px solid #d1d1d1;
+}
+
+.member-left-side img {
+    height: 120px;
+    width: 120px;
+    margin: 5px 0 0 10px;
+}
+
+.member-detail {
+    margin: 2px 0 0 -140px;
+}
+
+.member-left-side p,
+.member-right-side p {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.member-left-side span {
+    color: #6255a5;
+    margin: 0 0 0 -30px;
+    font-weight: 600;
+
+}
+
+/* Member info right */
+
+.member-right-side span {
+    color: #6255a5;
+    margin: 0 0 0 -120px;
+    font-weight: 600;
+}
+
+/* Notes */
+#member-notes h2 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #6255a5;
+    margin: 0 0 20px 0;
+}
+
+#member-notes span {
+    color: #6255a5;
+}
+
+/* =================================
+            Spam Report
+===================================*/
+#spam-report h2 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #6255a5;
+    margin: 80px 0 0 0;
+}
+
+#spam-report input {
+    margin: 80px 0 0 0;
+    width: 100%;
+    padding-left: 30px;
+}
+
+#spam-report button {
+    margin: 80px 0 0 -20px;
+    width: 130%;
+    padding: 6px 10px 27px 10px;
+    font-size: 14px;
+}
+
+#spam-report .search-icon {
+    float: right;
+    margin-top: -24px;
+    margin-right: 88%;
+    z-index: 2;
+    color: #d1d1d1;
+}
+
+#spam-report span {
+    color: #6255a5;
+}
+
+#spam-report i {
+    color: #d1d1d1;
+}
+
+/* =================================
+            Manage sys config
+===================================*/
+#manage-sys-config h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #6255a5;
+    margin: 80px 0 20px 0;
+}
+
+#manage-sys-config input {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #8a8a8a !important;
+    margin: 0 0 30px 0;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+}
+
+#manage-sys-config label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 0 5px 0;
+}
+
+#img-upload {
+    border: 1px solid #d1d1d1;
+    padding: 10px 0 0 0;
+    margin-bottom: 30px;
+}
+
+#img-upload p {
+    color: #d1d1d1;
+}
+
+#manage-sys-submit {
+    padding: 10px 0 30px 0;
+    width: 18%;
+}
+
+/* =================================
+        Notes Under Review                                  
+==================================== */
+#notes-under-review h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #6255a5;
+    margin: 80px 0 20px 0;
+}
+
+#notes-under-review select {
+    width: 20%;
+    margin: 0 0 10px 0;
+}
+
+#notes-under-review input {
+    margin: 25px 0 0 -30px;
+    padding-left: 30px;
+}
+
+#notes-under-review span {
+    color: #6255a5;
+}
+
+#notes-under-review .search-icon {
+    float: right;
+    margin-top: -24px;
+    margin-right: 102%;
+    z-index: 2;
+    color: #d1d1d1;
+}
+
+#search-btn {
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 20px;
+    width: 117px;
+    padding: 4px 5px 26px 5px;
+    margin: 25px 0 0 -50px;
+}
+
+table button {
+    font-size: 14px !important;
+    line-height: 22px !important;
+    width: 85px !important;
+    padding: 0 !important;
+}
+
+table .btn-red {
+    background: #ff3636;
+}
+
+table .btn-green {
+    background: #28a745;
+}
+
+table .btn-gray {
+    background: #cccccc;
+}
+
+table button:hover,
+table button:focus {
+    color: #fff !important;
+}
+
+/* ===============================
+        Published Notes Page      
+================================== */
+
+#published-note h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #6255a5;
+    margin: 80px 0 20px 0;
+}
+
+#published-note select {
+    width: 20%;
+    margin: 0 0 10px 0;
+}
+
+#published-note input {
+    margin: 25px 0 0 -30px;
+    padding-left: 30px;
+}
+
+#published-note span {
+    color: #6255a5;
+}
+
+#published-note .search-icon {
+    float: right;
+    margin-top: -24px;
+    margin-right: 102%;
+    z-index: 2;
+    color: #d1d1d1;
+}
+
+#search-btn {
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 20px;
+    width: 117px;
+    padding: 4px 5px 26px 5px;
+    margin: 25px 0 0 -50px;
+}
+
+
+/* ===========================
+        Downloaded Notes          
+============================== */
+
+#down-notes h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #6255a5;
+    margin: 80px 0 20px 0;
+}
+
+#down-notes select {
+    width: 80%;
+    margin: 0 0 10px 0;
+}
+
+#down-notes input {
+    margin: 25px 0 0 170px;
+}
+
+#down-notes span {
+    color: #6255a5;
+}
+
+#down-notes .col-md-2 {
+    margin-right: -50px;
+}
+
+#down-notes #search-btn {
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 20px;
+    width: 117px;
+    padding: 4px 5px 26px 5px;
+    margin: 25px 0 0 150px;
+}
+
+#down-notes .search-icon {
+    float: right;
+    margin-top: -25px;
+    margin-right: 18%;
+    z-index: 2;
+    color: #d1d1d1;
+}
+
+/* ===========================
+       Rejected Notes      
+============================== */
+#rejected-notes h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #6255a5;
+    margin: 80px 0 20px 0;
+}
+
+#rejected-notes select {
+    width: 20%;
+    margin: 0 0 10px 0;
+}
+
+#rejected-notes input {
+    margin: 25px 0 0 -30px;
+    padding-left: 30px;
+}
+
+#rejected-notes .search-icon {
+    float: right;
+    margin-top: -24px;
+    margin-right: 102%;
+    z-index: 2;
+    color: #d1d1d1;
+}
+
+#rejected-notes span {
+    color: #6255a5;
+}
+
+#rejected-notes #search-btn {
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 20px;
+    width: 117px;
+    padding: 4px 5px 26px 5px;
+    margin: 25px 0 0 -50px;
+}
+
+/* =================================
+            add Category
+===================================*/
+#add-cat h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+    margin: 50px 0 20px 0;
+}
+
+#add-cat input,
+#add-cat textarea {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #8a8a8a !important;
+    margin: 0 0 30px 0;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+}
+
+#add-cat-submit {
+    padding: 10px 0 30px 0;
+}
+
+#add-cat textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+}
+
+/* =================================
+            add Country
+===================================*/
+#add-country h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+    margin: 80px 0 20px 0;
+}
+
+#add-country input {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #8a8a8a !important;
+    margin: 0 0 30px 0;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+}
+
+#add-country-submit {
+    margin: 0;
+    padding: 10px 0 30px 0;
+}
+
+/*Thank yoy popup*/
+#exampleModal {
+    margin-top: 100px;
+}
+
+#exampleModal span {
+    margin: 0 5px 0 0;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+#exampleModal img {
+    margin: -20px 0 0 0;
+    height: 63px;
+    width: 63px;
+}
+
+.model-content {
+    padding: 50px 55px 30px 40px;
+}
+
+
+/* =================================
+            Note details
+===================================*/
+/* Left Side */
+
+.left-side-notes {
+    width: 610px;
+    margin-left: -10px;
+}
+
+#note-detail h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #6255a5;
+    margin: 60px 0 20px 0;
+}
+
+.left-side-notes img {
+    height: 300px;
+    width: 240px;
+}
+
+.left-side-notes h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 10px 0 0 0;
+}
+
+.left-side-notes p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.left-side-notes .col-md-6:last-child {
+    margin-left: -15px;
+}
+
+#download-price-btn a {
+    width: 204px;
+    height: 50px;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+/* Right Side */
+
+.right-side-notes {
+    margin-left: 60px;
+    width: 400px;
+}
+
+.right-side-notes p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0;
+}
+
+.right-side-notes span {
+    color: #6255a5;
+}
+
+.right-side-notes .rate {
+    margin: 5px -10px 0 -30px;
+}
+
+#border {
+    border-bottom: 1px solid #d1d1d1;
+    margin: 60px 0 0 0;
+}
+
+#inappropriate {
+    color: #df3434;
+}
+
+/* =================================
+            Note details
+===================================*/
+/* Left Side */
+
+.left-side-notes {
+    width: 610px;
+    margin-left: -10px;
+}
+
+#note-detail h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #6255a5;
+    margin: 60px 0 20px 0;
+}
+
+.left-side-notes img {
+    height: 300px;
+    width: 240px;
+}
+
+.left-side-notes h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 10px 0 0 0;
+}
+
+.left-side-notes p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.left-side-notes .col-md-6:last-child {
+    margin-left: -15px;
+}
+
+#download-price-btn button {
+    width: 204px;
+    height: 50px;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+/* Right Side */
+
+.right-side-notes {
+    margin-left: 60px;
+    width: 400px;
+}
+
+.right-side-notes p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0;
+}
+
+.right-side-notes span {
+    color: #6255a5;
+    font-weight: 600;
+}
+
+.right-side-notes .rate {
+    margin: 5px -10px 0 -30px;
+}
+
+#border {
+    border-bottom: 1px solid #d1d1d1;
+    margin: 60px 0 0 0;
+}
+
+/* =================================
+            Notes Previews
+===================================*/
+
+#notes-preview {
+    margin: -40px 0 0 0;
+}
+
+#notes-preview h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #6255a5;
+    margin: 0 0 20px -15px;
+}
+
+.center-block-horiz {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.set-margin-cicis-menu-to-go {
+    margin: 20px;
+}
+
+.set-padding-cicis-menu-to-go {
+    padding: 20px;
+}
+
+.set-border-cicis-menu-to-go {
+    border: 1px solid #d1d1d1;
+    width: 450px;
+    height: 450px;
+    border-radius: 3px;
+}
+
+set-box-shadow-cicis-menu-to-go {
+    -webkit-box-shadow: 4px 4px 14px #4f4f4f;
+    -moz-box-shadow: 4px 4px 14px #4f4f4f;
+    box-shadow: 4px 4px 14px #4f4f4f;
+}
+
+.responsive-wrapper {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+}
+
+.responsive-wrapper img,
+.responsive-wrapper object,
+.responsive-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    border-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#Iframe-Cicis-Menu-To-Go {
+    max-width: 666.67px;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.responsive-wrapper-padding-bottom-90pct {
+    padding-bottom: 90%;
+}
+
+/* =================================
+            Customer Reviews
+===================================*/
+
+#customer-review .col-md-7 {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    height: 450px;
+}
+
+#customer-review h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #6255a5;
+    margin: 0 0 20px 0;
+}
+
+#customer-review img {
+    height: 50px;
+    width: 50px;
+    margin: -11px 0 0 -10px;
+}
+
+#customer-review .row {
+    padding: 30px 20px 30px 30px;
+}
+
+#customer-review p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 5px;
+}
+
+#customer-review .rate {
+    margin: -3px -10px 0 -10px;
+}
+
+.cust-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: -10px 0 6px 0;
+}
+
+.border {
+    border-bottom: 1px solid #d1d1d1;
+    margin: 10px 0 0 0;
+}
+
+.cust-2,
+.cust-3 {
+    margin: -15px 0 0 0;
+}
+
+.cust-1 .col-md-10,
+.cust-2 .col-md-10,
+.cust-3 .col-md-10 {
+    margin-left: -45px;
+}
+
+.cust-1 p,
+.cust-2 p {
+    margin-bottom: 5px;
+}
+
+.cust-2 .col-md-10,
+.cust-3 .col-md-10,
+.cust-2 .col-md-2,
+.cust-3 .col-md-2 {
+    margin-top: -15px
+}
+
+/* =================================
+            Process Notes
+===================================*/
+
+#process-note,
+#publish-note {
+    margin: -20px 0 0 0;
+}
+
+#process-note h6,
+#publish-note h6 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #6255a5;
+}
+
+#process-note input,
+#publish-note input {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #8a8a8a;
+    border: 1px solid #d1d1d1;
+    margin: 0 0 0 65px;
+    padding: 0 0 0 30px;
+}
+
+#process-note #process-search-btn a,
+#publish-note #publish-search-btn a {
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 20px;
+    width: 117px;
+    padding: 4px 5px 26px 5px;
+    margin: 0;
+}
+
+/* =================================
+        Common Css For    
+        Basic Note Details,
+    Institution Information,
+        Course Details
+===================================*/
+#add-notes-form h2 {
+    margin: 30px 0 30px 0;
+}
+
+#add-notes-form p {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+#add-notes-form input,
+#add-notes-form select {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #8a8a8a !important;
+    margin: 0 0 30px 0;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    width: 100%;
+}
+
+#add-notes-form select {
+    padding: 0 0 0 10px;
+    height: 35px;
+}
+
+/* =================================
+        Basic Note Details
+===================================*/
+
+#basic-note-details h2 {
+    margin: 0 0 30px 0;
+}
+
+#notes-upload {
+    border: 1px solid #d1d1d1;
+    padding: 10px 0 0 0;
+}
+
+#notes-upload img {
+    width: 50px;
+    height: 46px;
+}
+
+#notes-upload p {
+    color: #d1d1d1;
+}
+
+#basic-note-details textarea {
+    width: 100%;
+    height: 120px;
+    padding: 10px 0 0 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #8a8a8a !important;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+}
+
+#basic-note-details #notes-upload,
+#basic-note-details #img-upload {
+    margin-bottom: 30px;
+}
+
+/* =================================
+        Selling Information
+===================================*/
+
+/* Left side */
+
+#sell-info-left #free-rbtn,
+#sell-info-left #paid-rbtn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #d1d1d1;
+    margin: -4px 0 20px -15px;
+}
+
+#sell-info-left #free-rbtn:checked,
+#sell-info-left #paid-rbtn:checked {
+    border: 1px solid #6255a5;
+    background: #6255a5;
+}
+
+#sell-info-left button {
+    width: 150px;
+    height: 30px;
+    font-size: 17px;
+    line-height: 20px;
+    padding: 7px 0 26px 0;
+    margin: 0;
+}
+
+#sell-info-left #publish-btn a {
+    margin-left: -20px;
+}
+
+#sell-info-left label {
+    margin: 0 0 0 -20px;
+}
+
+/* right side */
+
+#file-upload {
+    border: 1px solid #d1d1d1;
+    padding: 10px 0 0 0;
+    height: 115px;
+}
+
+#file-upload p {
+    color: #d1d1d1;
+}
+
+#file-upload img {
+    margin-top: 15px;
+}
+
+/* ==================================================================
+                                                                     
+                    My Download / My Sold Notes                     
+                                                                      
+================================================================== */
+/* =================================
+    My Download / My Sold Notes
+    My Rejected Notes /
+    Buyer Requests
+===================================*/
+
+#mydownload h3,
+#my-sold-notes h3,
+#my-rejected-notes h3,
+#buyer-requests h3 {
+    margin: 60px 0 20px 0;
+    font-size: 30px;
+    font-weight: 600;
+    color: #6255a5;
+    line-height: 30px;
+}
+
+#mydownload table span,
+#my-sold-notes span,
+#my-rejected-notes span,
+#buyer-requests span {
+    color: #6255a5;
+}
+
+#mydownload input,
+#my-sold-notes input,
+#my-rejected-notes input,
+#buyer-requests input {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #8a8a8a;
+    border: 1px solid #d1d1d1;
+    margin: 62px 0 0 160px;
+    padding: 0 0 0 30px;
+}
+
+#mydownload #dwnld-search-btn a,
+#my-sold-notes #sold-notes-search-btn a,
+#my-rejected-notes #sold-notes-search-btn a,
+#buyer-requests #sold-notes-search-btn a {
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 20px;
+    width: 117px;
+    padding: 6px 5px 24px 5px;
+    margin: 60px 0 0 0;
+}
+
+/* =================================
+        Get In Touch Img
+===================================*/
+
+#get-in-touch-bg-img {
+    position: fixed;
+    top: 59%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    background-size: cover;
+    background: no-repeat;
+    margin: 0 auto;
+}
+
+#get-in-touch-content h2 {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-weight: 600;
+    margin: 180px 0 0 0;
+    position: absolute;
+}
+
+#get-in-touch h2 {
+    margin: 0 0 -28px 0;
+}
+
+#get-in-touch p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 30px 0 5px 0;
+}
+
+#get-in-touch input {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #8a8a8a;
+}
+
+#get-in-touch textarea {
+    width: 100%;
+    height: 190px;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+#submit-btn-git button {
+    width: 150px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+#get-in-touch label {
+    margin: 20px 0 5px 0;
+}

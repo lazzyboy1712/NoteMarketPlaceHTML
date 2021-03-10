@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- important meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Manage System Configuration</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/favicon/favicon.ico">
+
+    <!-- google fonts --->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-fixed-top white-nav-top">
+            <div class="container-fluid">
+                <div class="site-nav-wrapper">
+                    <div class="navbar-header">
+
+                        <!-- Mobile Menu Open Button -->
+                        <span id="mobile-nav-open-btn">&#9776;</span>
+
+                        <!-- logo -->
+                        <a href="#" class="navbar-brand">
+                            <img src="../img/home/logo.png" alt="logo" id="logo-img">
+                        </a>
+                    </div>
+
+                    <!-- Main Menu -->
+                    <div class="container" id="main-menu">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav pull-right">
+                                <li><a href="#">Dashboard</a></li>
+                                <li><a href="#">Notes</a></li>
+                                <li><a href="#">Members</a></li>
+                                <li><a href="#">Reports</a></li>
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="#"><img src="../img/Customer/cust-1.jpg" alt="user" class="img-circle" id="user-image"></a></li>
+                                <li><a href="#" id="navigation-login-btn">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Menu -->
+                    <div id="mobile-nav">
+                        <span id="mobile-nav-close-btn">&times;</span>
+
+                        <div id="mobile-nav-content">
+                            <ul class="nav">
+                                <li><a href="#">Dashboard</a></li>
+                                <li><a href="#">Notes</a></li>
+                                <li><a href="#">Members</a></li>
+                                <li><a href="#">Reports</a></li>
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Ends -->
+
+    <!-- Manage System Configuration -->
+    <section id="manage-sys-config">
+        <form action="">
+            <div class="content-box-md">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 col-sm-7 col-xs-8">
+                            <div class="manage-sys-config-form">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h2>Manage System Configuration</h2>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <label for="support-email">Support emails address *</label><br>
+                                        <input id="support-email" type="text" class="form-control" placeholder=" " value="John" required>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <label for="support-phone">Support phone number *</label><br>
+                                        <input id="support-phone" type="text" class="form-control" placeholder="Enter phone number" required>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <label for="notify-email">Email Address(es)(for various events system will send notifications to these users)*</label><br>
+                                        <input id="notify-email" type="email" class="form-control" placeholder="Enter email address" required>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <label for="facebook-url">Facebook URL</label><br>
+                                        <input id="facebook-url" type="url" class="form-control" placeholder="Enter facebook url" required>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <label for="twitter-url">Twitter URL</label><br>
+                                        <input id="twitter-url" type="url" class="form-control" placeholder="Enter twitter url" required>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <label for="linkedin-url">Linkedin URL</label><br>
+                                        <input id="linkedin-url" type="url" class="form-control" placeholder="Enter linkedin url" required>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <label for="img-upload">Default image for notes(if seller do not upload)</label>
+                                        <a href="#">
+                                            <div id="img-upload" class="text-center">
+
+                                                <img src="../img/User-Profile/upload.png" alt="Upload a picture">
+                                                <p>Upload a picture</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <label for="img-upload">Default profile picture for notes(if seller do not upload)</label>
+                                        <a href="#">
+                                            <div id="img-upload" class="text-center">
+
+                                                <img src="../img/User-Profile/upload.png" alt="Upload a picture">
+                                                <p>Upload a picture</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <button class="btn btn-general btn-purple" type="submit" id="manage-sys-submit">SUBMIT</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <!-- Manage System Configuration Ends -->
+
+    <!-- Footer -->
+    <footer class="text-left">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-sm-7 col-xs-7">
+                    <p>version : 1.1.24</p>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5">
+                    <p>copyright &copy; Tatvasoft All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <!-- JQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

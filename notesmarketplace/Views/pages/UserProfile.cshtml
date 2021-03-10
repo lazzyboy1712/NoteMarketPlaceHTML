@@ -1,0 +1,279 @@
+﻿@model notesmarketplace.UserProfile
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- important meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Profile</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/Content/img/favicon/favicon.ico">
+
+    <!-- google fonts --->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="~/Content/css/font-awesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/css/bootstrap/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Content/css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/Content/css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-fixed-top white-nav-top">
+            <div class="container-fluid">
+                <div class="site-nav-wrapper">
+                    <div class="navbar-header">
+
+                        <!-- Mobile Menu Open Button -->
+                        <span id="mobile-nav-open-btn">&#9776;</span>
+
+                        <!-- logo -->
+                        <a href="~/Views/Home/Index.cshtml" class="navbar-brand">
+                            <img src="~/Content/img/home/logo.png" alt="logo" id="logo-img">
+                        </a>
+                    </div>
+
+                    <!-- Main Menu -->
+                    <div class="container" id="main-menu">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav pull-right">
+                                <li><a href="#">Search Notes</a></li>
+                                <li><a href="#">Sell Your Notes</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#"><img src="~/Content/img/Customer/cust-1.jpg" alt="user" class="img-circle" id="user-image-user-profile"></a></li>
+                                <li><a href="#" id="navigation-login-btn">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Menu -->
+                    <div id="mobile-nav">
+                        <span id="mobile-nav-close-btn">&times;</span>
+
+                        <div id="mobile-nav-content">
+                            <ul class="nav">
+                                <li><a href="pages/search-note.html">Search Notes</a></li>
+                                <li><a href="pages/add-notes.html">Sell Your Notes</a></li>
+                                <li><a href="pages/faq.html">FAQ</a></li>
+                                <li><a href="pages/contact-us.html">Contact Us</a></li>
+                                <li><a href="pages/login.html">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Ends -->
+    <!-- User Profile Image -->
+    <section id="user-profile">
+
+        <div class="image-and-content">
+
+            <!-- Background Image -->
+            <div id="user-profile-bg-img">
+                <img src="~/Content/img/User-Profile/banner-with-overlay.jpg" alt="Home Page">
+            </div>
+
+            <!-- Usser Contant -->
+            <div id="user-content" class="text-center">
+                <h2>User Profile</h2>
+            </div>
+            <!-- User Profile Ends -->
+
+        </div>
+    </section>
+
+    <!-- Profile Details -->
+    <section id="user-profile-form">
+        <form method="post" enctype="multipart/form-data">
+            <div id="basic-profile">
+                <div class="content-box-md">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <h4>Basic Profile Details</h4>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="firstname-user-profile">First Name *</label>
+                                @Html.TextBoxFor(m => m.User.FirstName,new { @class= "form-control", @id= "firstname-user-profile",@placeholder= "Enter your first name" })
+                               @*<input name="FirstName" type="text" class="form-control" id="firstname-user-profile" placeholder="Enter your first name" required>*@
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="lastname-user-profile">Last Name *</label>
+                                @Html.TextBoxFor(m => m.User.LastName, new { @class = "form-control", @id = "lastname-user-profile", @placeholder = "Enter your last name" })
+                                @*<input name="LastName" value="@Model.User.LastName" type="text" class="form-control" id="lastname-user-profile" placeholder="Enter your last name" required>*@
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="email-id-user-profile">Email *</label>
+                                <input name="EmailID" value="@Model.User.EmailID" readonly type="email" class="form-control" id="email-id-user-profile" placeholder="Enter your email address" required>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="dob-user-profile">Date of Birth</label>
+                                <input name="DOB" type="date" class="form-control" id="dob-user-profile" placeholder="Enter your birth date">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="gender">Gender</label>
+                                <select id="gender" name="Gender" class="form-control">
+                                    <option value="0">Select your gender</option>
+                                    <option value="1">Male</option>
+                                    <option value="2">Female</option>
+                                    <option value="3">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="phone-user-profile">Phone Number</label>
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-3 col-xs-3">
+                                        <select id="country-code" name="CountryCode">
+                                            <option value="india">+91</option>
+                                            <option value="japan">+81</option>
+                                            <option value="mexico">+52</option>
+                                            <option value="united state">+1</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-10 col-sm-9 col-xs-9">
+                                        <input name="PhoneNumber" type="text" class="form-control" id="phone-user-profile" placeholder="Enter your phone number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <label for="img-upload">Profile Picture</label>
+                                <div class="upload-image">
+                                    <input type="file" name="Profile_Picture" accept="image/*" class="form-control">
+                                    <div id="img-upload-user" class="text-center">
+
+                                        <img src="~/Content/img/User-Profile/upload.png" alt="Upload a picture">
+                                        <p>Upload a picture</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Basic Profile Details Ends-->
+            <!-- Address Details -->
+            <div id="address-details">
+                <div class="content-box-md">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <h4>Address Details</h4>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="add1-user-profile">Address Line 1 *</label>
+                                <input name="AddressLine1" type="text" class="form-control" id="add1-user-profile" placeholder="Enter your first name" required>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="add2-user-profile">Address Line 2 *</label>
+                                <input name="AddressLine2" type="text" class="form-control" id="add2-user-profile" placeholder="Enter your first name" required>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="city-user-profile">City *</label>
+                                <input name="City" type="text" class="form-control" id="city-user-profile" placeholder="Enter your first name" required>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="state-user-profile">State *</label>
+                                <input name="State" type="text" class="form-control" id="state-user-profile" placeholder="Enter your first name" required>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="zip-user-profile"> ZipCode *</label>
+                                <input name="ZipCode" type="text" class="form-control" id="zip-user-profile" placeholder="Enter your first name" required>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="country">Country *</label>
+                                <select id="country" name="Country" class="form-control">
+                                    <option value="1">Select your country</option>
+                                    <option value="India">India</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="Mexico">Mexico</option>
+                                    <option value="United State">United State</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Address Details Ends -->
+            <!-- University and College Information -->
+            <div id="uni-coll-details">
+                <div class="content-box-md">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <h4>University and College Information</h4>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="uni-user-profile">University</label>
+                                <input name="University" type="text" class="form-control" id="uni-user-profile" placeholder="Enter your first name" required>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="coll-user-profile">College</label>
+                                <input name="College" type="text" class="form-control" id="coll-user-profile" placeholder="Enter your first name" required>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <button class="btn btn-general btn-purple" id="user-submit" type="submit">SUBMIT</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- University and College Information Ends -->
+        </form>
+    </section>
+    <!-- Profile Details -->
+    <!-- Footer -->
+    <footer class="text-left">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-sm-9 col-xs-9">
+                    <p>copyright &copy; Tatvasoft All rights reserved.</p>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <ul class="social-list text-center">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+    <!-- JQuery -->
+    <script src="~/Scripts/js/jquery.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="~/Scripts/js/script.js"></script>
+
+    @Scripts.Render("~/bundles/jqueryval")
+
+</body>
+
+</html>
