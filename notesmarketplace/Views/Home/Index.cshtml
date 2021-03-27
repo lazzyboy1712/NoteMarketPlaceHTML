@@ -1,92 +1,16 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@{
+    ViewBag.Title = "Notes MarketPlace";
+    if (Session["email"] != null)
+    {
+        Layout = "~/Views/Shared/RegisterUser.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/NonRegisterUser.cshtml";
+    }
+}
 
-<head>
 
-    <!-- important meta tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0 ,user-scalable=no">
-
-    <!-- Title -->
-    <title>Notes MarketPlace</title>
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="~/Content/img/favicon/favicon.ico">
-
-    <!-- google fonts --->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="~/Content/css/font-awesome/css/font-awesome.min.css">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="~/Content/css/bootstrap/bootstrap.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="~/Content/css/style.css">
-
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="~/Content/css/responsive.css">
-
-</head>
-
-<body>
-
-    <!-- Preloader -->
-    <div id="preloader">
-        <div id="status"></div>
-    </div>
-
-    <!-- Header -->
-    <header id="hm-nav">
-        <nav class="navbar navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="site-nav-wrapper">
-                    <div class="navbar-header">
-
-                        <!-- Mobile Menu Open Button -->
-                        <span id="mobile-nav-open-btn">&#9776;</span>
-
-                        <!-- logo -->
-                        <a href="~/Views/Home/" class="navbar-brand">
-                            <img src="~/Content/img/home/top-logo.png" alt="logo" id="logo-img">
-                        </a>
-                    </div>
-
-                    <!-- Main Menu -->
-                    <div class="container" id="main-menu">
-                        <div class="collapse navbar-collapse">
-                            <ul class="nav navbar-nav pull-right">
-                                <li>@Html.ActionLink("Search Notes", "SearchNotes", "pages", null, new { @class = "smooth-scroll" })</li>
-                                <li>@Html.ActionLink("Sell Your Notes", "AddNotes", "pages", null, new { @class = "smooth-scroll" })</li>
-                                <li>@Html.ActionLink("FAQ", "Faq", "pages", null, new { @class = "smooth-scroll" })</li>
-                                <li>@Html.ActionLink("Contact Us", "ContactUs", "pages", null, new { @class = "smooth-scroll" })</li>
-                                <li>@Html.ActionLink("LOGIN", "LogIn", "pages", null, new { @class = "smooth-scroll", @id= "navigation-login-btn" })</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Mobile Menu -->
-                    <div id="mobile-nav">
-                        <span id="mobile-nav-close-btn">&times;</span>
-
-                        <div id="mobile-nav-content">
-                            <ul class="nav">
-                                <li>@Html.ActionLink("Search Notes", "SearchNotes", "pages")</li>
-                                <li>@Html.ActionLink("Sell Your Notes", "AddNotes", "pages")</li>
-                                <li>@Html.ActionLink("FAQ", "Faq", "pages")</li>
-                                <li>@Html.ActionLink("Contact Us", "ContactUs", "pages")</li>
-                                <li>@Html.ActionLink("LOGIN", "LogIn", "pages")</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- Header Ends -->
     <!-- Home -->
     <section id="home">
 
@@ -94,7 +18,6 @@
         <div id="home-bg-img">
             <img src="~/Content/img/home/banner-with-overlay.jpg" alt="Home Page">
         </div>
-
         <!-- Home Content -->
         <div id="home-content">
             <div id="home-content-inner" class="text-left">
@@ -124,6 +47,7 @@
                             <div id="about-left">
                                 <div class="horizontal-heading">
                                     <h5>About<br>NotesMarketPlace</h5>
+                                    <p>@Session["email"]</p>
                                 </div>
                             </div>
                         </div>
@@ -270,33 +194,4 @@
         </div>
     </section>
     <!-- Customer Ends -->
-    <!-- Footer -->
-    <section>
-        <footer class="text-left">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-9 col-sm-9 col-xs-9">
-                        <p>copyright &copy; Tatvasoft All rights reserved.</p>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-3">
-                        <ul class="social-list text-center">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                            <li><a href=""><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </section>
-    <!-- Footer Ends -->
-
-    <!-- JQuery -->
-    <script src="~/Scripts/js/jquery.min.js"></script>
-
-    <!-- Custom JS -->
-    <script src="~/Scripts/js/script.js"></script>
-
-</body>
-
-</html>
+   

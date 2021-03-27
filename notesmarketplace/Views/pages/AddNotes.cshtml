@@ -1,312 +1,263 @@
 ﻿@model notesmarketplace.SellerNote
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
+@{
+    ViewBag.Title = "Add Note";
+    if (Session["email"] != null)
+    {
+        Layout = "~/Views/Shared/RegisterUser.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/NonRegisterUser.cshtml";
+    }
 
-    <!-- important meta tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Title -->
-    <title>Add Notes</title>
+}
+<!-- Add Note Image -->
+<section id="add-notes">
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="~/Content/img/favicon/favicon.ico">
+    <div class="image-and-content">
 
-    <!-- google fonts --->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+        <!-- Background Image -->
+        <div id="add-notes-bg-img">
+            <img src="~/Content/img/Add-notes/banner-with-overlay.jpg" alt="Add Notes">
+        </div>
 
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="~/Content/css/font-awesome/css/font-awesome.min.css">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="~/Content/css/bootstrap/bootstrap.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="~/Content/css/style.css">
-
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="~/Content/css/responsive.css">
-
-</head>
-
-<body>
-
-    <!-- Preloader -->
-    <div id="preloader">
-        <div id="status"></div>
+        <!-- Usser Contant -->
+        <div id="add-notes-content" class="text-center">
+            <h2>Add Notes</h2>
+        </div>
     </div>
+</section>
+<!-- Add Notes Image Ends -->
+<!-- Add notes Form -->
+<section id="add-notes-form">
+    @*<form method="post" enctype="multipart/form-data">*@
+    @using(Html.BeginForm("SaveNote","pages"))
+    {
+        <div class="content-box-md">
+            <div class="container">
+                <!-- Basic Note Details Start -->
+                <div id="basic-note-details">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <h2>Basic Note Details</h2>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label for="title-add-notes">Title *</label>
+                            <input name="Title" type="text" class="form-control" id="title-add-notes" placeholder="Enter your notes title" required>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label for="catagory-add-notes">Category *</label>
+                            <select id="catagory-add-notes" name="Category" class="form-control" required>
+                                <option value="0">Select your category</option>
+                                @{
+                                    List<NoteCategory> mycategory = ViewBag.CategoryList;
 
-    <!-- Header -->
-    <header>
-        <nav class="navbar navbar-fixed-top white-nav-top">
-            <div class="container-fluid">
-                <div class="site-nav-wrapper">
-                    <div class="navbar-header">
+                                    foreach (NoteCategory category in mycategory)
+                                    {
+                                        <option value="@category.ID">@category.Name</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label for="img-upload-add-notes">Display Picture *</label>
+                            <div class="upload-image">
+                                <input type="file" name="Display_Picture">
+                                <div id="img-upload-user" class="text-center">
+                                    <img src="~/Content/img/User-Profile/upload.png" alt="Upload a picture">
+                                    <p>Upload a picture</p>
+                                </div>
+                                <p>@ViewBag.display_picture</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label for="notes-upload">Upload Notes *</label>
+                            <div class="upload-image">
+                                <input type="file" name="Note_Attachment">
+                                <div id="img-upload-file" class="text-center">
 
-                        <!-- Mobile Menu Open Button -->
-                        <span id="mobile-nav-open-btn">&#9776;</span>
+                                    <img src="~/Content/img/Add-notes/upload-notes.png" alt="Upload a picture">
+                                    <p>Upload your notes</p>
+                                </div>
+                                <p>@ViewBag.note_attachment</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label for="note-type">Type</label>
+                            <select id="note-type" name="NoteType" class="form-control">
+                                <option value="0">Select your note type</option>
+                                @{
+                                    List<NoteType> mytype = ViewBag.TypeList;
 
-                        <!-- logo -->
-                        <a href="#" class="navbar-brand">
-                            <img src="~/Content/img/home/logo.png" alt="logo" id="logo-img">
-                        </a>
-                    </div>
-
-                    <!-- Main Menu -->
-                    <div class="container" id="main-menu">
-                        <div class="collapse navbar-collapse">
-                            <ul class="nav navbar-nav pull-right">
-                                <li>@Html.ActionLink("Search Notes", "SearchNotes", "pages", null, new { @class = "smooth-scroll" })</li>
-                                <li>@Html.ActionLink("Sell Your Notes", "AddNotes", "pages", null, new { @class = "smooth-scroll" })</li>
-                                <li>@Html.ActionLink("Buyer Request", "BuyerRequest", "pages", null, new { @class = "smooth-scroll" })</li>
-                                <li>@Html.ActionLink("FAQ", "Faq", "pages", null, new { @class = "smooth-scroll" })</li>
-                                <li>@Html.ActionLink("Contact Us", "ContactUs", "pages", null, new { @class = "smooth-scroll" })</li>
-                                <li><a href="#" class="u-img"><img src="~/Content/img/Customer/cust-1.jpg" alt="user" class="img-circle" id="user-image-add-notes"></a></li>
-                                <li>@Html.ActionLink("LOGOUT", "LogIn", "pages", null, new { @class = "smooth-scroll", @id = "navigation-login-btn" })</li>
-                            </ul>
+                                    foreach (NoteType type in mytype)
+                                    {
+                                        <option value="@type.ID">@type.Name</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label for="pages-add-notes">Number of Pages</label>
+                            <input name="NumberOfPage" type="text" class="form-control" id="pages-add-notes" placeholder="Enter number of notes pages">
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <label for="discription">Description *</label>
+                            <textarea name="Description" id="discription" class="form-control" placeholder="Enter your description" required></textarea>
                         </div>
                     </div>
-
-                    <!-- Mobile Menu -->
-                    <div id="mobile-nav">
-                        <span id="mobile-nav-close-btn">&times;</span>
-
-                        <div id="mobile-nav-content">
-                            <ul class="nav">
-                                <li>@Html.ActionLink("Search Notes", "SearchNotes", "pages", null, new { @class = "smooth-scroll" })</li>
-                                <li>@Html.ActionLink("Sell Your Notes", "AddNotes", "pages", null, new { @class = "smooth-scroll" })</li>
-                                <li>@Html.ActionLink("FAQ", "Faq", "pages", null, new { @class = "smooth-scroll" })</li>
-                                <li>@Html.ActionLink("Contact Us", "ContactUs", "pages", null, new { @class = "smooth-scroll" })</li>
-                                <li>@Html.ActionLink("LOGIN", "LogIn", "pages")</li>
-                            </ul>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
-        </nav>
-    </header>
-    <!-- Header Ends -->
-    <!-- Add Note Image -->
-    <section id="add-notes">
-
-        <div class="image-and-content">
-
-            <!-- Background Image -->
-            <div id="add-notes-bg-img">
-                <img src="~/Content/img/Add-notes/banner-with-overlay.jpg" alt="Add Notes">
-            </div>
-
-            <!-- Usser Contant -->
-            <div id="add-notes-content" class="text-center">
-                <h2>Add Notes</h2>
-            </div>
-        </div>
-    </section>
-    <!-- Add Notes Image Ends -->
-    <!-- Add notes Form -->
-    <section id="add-notes-form">
-        <form method="post" enctype="multipart/form-data">
-            <div class="content-box-md">
-                <div class="container">
-                    <!-- Basic Note Details Start -->
-                    <div id="basic-note-details">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <h2>Basic Note Details</h2>
+                <!-- Basic Note Details Start Ends -->
+                <!-- Popup for Confirmation-->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
-                            <div class="col-md-6 col-sm-6">
-                                <label for="title-add-notes">Title *</label>
-                                <input name="Title" type="text" class="form-control" id="title-add-notes" placeholder="Enter your notes title" required>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <label for="catagory-add-notes">Category *</label>
-                                <input name="Category" type="text" class="form-control" id="catagory-add-notes" placeholder="Enter your category" required>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <label for="img-upload-add-notes">Display Picture</label>
-                                <div class="upload-image">
-                                    <input type="file" name="Display_Picture">
-                                    <div id="img-upload-user" class="text-center">
-
-                                        <img src="~/Content/img/User-Profile/upload.png" alt="Upload a picture">
-                                        <p>Upload a picture</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <label for="notes-upload">Upload Notes *</label>
-                                <div class="upload-image">
-                                    <input type="file" name="Upload_Note">
-                                    <div id="img-upload-file" class="text-center">
-
-                                        <img src="~/Content/img/Add-notes/upload-notes.png" alt="Upload a picture">
-                                        <p>Upload your notes</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <label for="note-type">Type</label>
-                                <select id="note-type" name="NoteType" class="form-control">
-                                    <option value="0">Select your note type</option>
-                                    <option value="1">First</option>
-                                    <option value="2">Second</option>
-                                    <option value="3">Third</option>
-                                    <option value="4">Fourth</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <label for="pages-add-notes">Number of Pages</label>
-                                <input name="NumberOfPage" type="text" class="form-control" id="pages-add-notes" placeholder="Enter number of notes pages">
-                            </div>
-                            <div class="col-md-12 col-sm-12">
-                                <label for="discription">Description *</label>
-                                <textarea name="Description" id="discription" class="form-control" placeholder="Enter your description" required></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Basic Note Details Start Ends -->
-                    <!-- Institution Information -->
-                    <div id="ins-info">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <h2>Institution Information</h2>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <label for="country">Country</label>
-                                <select id="country" name="Country" class="form-control">
-                                    <option value="1">Select your country</option>
-                                    <option value="Ind">India</option>
-                                    <option value="Jpn">Japan</option>
-                                    <option value="Mex">Mexico</option>
-                                    <option value="us">United State</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <label for="ins-name">Institution Name</label>
-                                <input name="InstitudeName" type="text" class="form-control" id="ins-name" placeholder="Enter your institution name">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Institution Information Ends -->
-                    <!-- Course Details -->
-                    <div id="course-details">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <h2>Course Details</h2>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <label for="course-name">Course Name</label>
-                                <input name="Course" type="text" class="form-control" id="course-name" placeholder="Enter your course name">
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <label for="course-code">Course Code</label>
-                                <input name="CourseCode" type="text" class="form-control" id="course-code" placeholder="Enter your course-code">
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <label for="prof-name">Professor / Lecturer</label>
-                                <input name="Professor" type="text" class="form-control" id="prof-name" placeholder="Enter your professor name">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Course Details Ends -->
-                    <!-- Selling Information -->
-                    <div id="sell-info">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <h2>Selling Information</h2>
-                            </div>
-
-                            <!-- Sell Info. Left Side -->
-                            <div class="col-md-6 col-sm-6">
-                                <div id="sell-info-left">
-                                    <div class="row">
-                                        <div class="col-md-12 col-sm-12">
-                                            <p>Sell for *</p>
-                                            <div class="col-md-1 col-sm-2 col-xs-3">
-                                                <input type="radio" aria-label="Free" id="free-rbtn" name="IsPaid" checked>
-                                            </div>
-                                            <div class="col-md-1 col-sm-2 col-xs-3">
-                                                <label for="free-rbtn">Free</label>
-                                            </div>
-                                            <div class="col-md-1 col-sm-2 col-xs-3">
-                                                <input type="radio" aria-label="Free" id="paid-rbtn" name="IsPaid">
-                                            </div>
-                                            <div class="col-md-1 col-sm-2 col-xs-3">
-                                                <label for="paid-rbtn">Paid</label>
-                                            </div>
+                            <div class="model-data">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="model-head text-center">
+                                            <i class="fa fa-question-circle fa-5x alert-warning"></i>
+                                            <h2>You really want to publish this ?</h2>
                                         </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <p>Sell Price *</p>
-                                            <input name="SellingPrice" type="text" class="form-control" id="sell-price" placeholder="Enter your price" required>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="modal-footer">
+                                            <button name="publishMail" type="submit" class="btn btn-general btn-purple">SUBMIT</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Popup for Confirmation-->
+                <!-- Institution Information -->
+                <div id="ins-info">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <h2>Institution Information</h2>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label for="country">Country</label>
+                            <select id="country" name="Country" class="form-control">
+                                <option value="0">Select your country</option>
+                                @{
+                                    List<Country> mycountry = ViewBag.CountryList;
 
-                            <!-- Sell Info. right Side -->
-                            <div class="col-md-6 col-sm-6">
-                                <p>Note Preview</p>
-                                <div class="upload-image">
-                                    <input type="file" name="Note_Preview">
-                                    <div id="img-upload-notes-review" class="text-center">
-                                        <img src="~/Content/img/User-Profile/upload.png" alt="Upload a picture">
-                                        <p>Upload a file</p>
+                                    foreach (Country country in mycountry)
+                                    {
+                                        <option value="@country.ID">@country.Name</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label for="ins-name">Institution Name</label>
+                            <input name="InstitutionName" type="text" class="form-control" id="ins-name" placeholder="Enter your institution name">
+                        </div>
+                    </div>
+                </div>
+                <!-- Institution Information Ends -->
+                <!-- Course Details -->
+                <div id="course-details">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <h2>Course Details</h2>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label for="course-name">Course Name</label>
+                            <input name="Course" type="text" class="form-control" id="course-name" placeholder="Enter your course name">
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label for="course-code">Course Code</label>
+                            <input name="CourseCode" type="text" class="form-control" id="course-code" placeholder="Enter your course-code">
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label for="prof-name">Professor / Lecturer</label>
+                            <input name="Professor" type="text" class="form-control" id="prof-name" placeholder="Enter your professor name">
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Details Ends -->
+                <!-- Selling Information -->
+                <div id="sell-info">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <h2>Selling Information</h2>
+                        </div>
+                        <script type="text/javascript">
+                            document.getElementById("sellprice").value = "0";
+                            function Sell() {
+                                document.getElementById("sellprice").removeAttribute("readonly", "readonly");
+                            }
+                            function Free() {
+                                document.getElementById("sellprice").setAttribute("readonly", "readonly");
+                                document.getElementById("sellprice").value = "0";
+                            }</script>
+
+                        <!-- Sell Info. Left Side -->
+                        <div class="col-md-6 col-sm-6">
+                            <div id="sell-info-left">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12">
+                                        <p>Sell for *</p>
+                                        <div class="col-md-1 col-sm-2 col-xs-3">
+                                            <input type="radio" aria-label="Free" onclick="Free()" id="free-rbtn" name="IsPaid" checked>
+                                        </div>
+                                        <div class="col-md-1 col-sm-2 col-xs-3">
+                                            <label for="free-rbtn">Free</label>
+                                        </div>
+                                        <div class="col-md-1 col-sm-2 col-xs-3">
+                                            <input type="radio" aria-label="Free" onclick="Sell()" id="paid-rbtn" name="IsPaid">
+                                        </div>
+                                        <div class="col-md-1 col-sm-2 col-xs-3">
+                                            <label for="paid-rbtn">Paid</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <p>Sell Price *</p>
+                                        <input name="SellingPrice" type="text" class="form-control" id="sellprice" value="0" placeholder="Enter your price" required>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-2 col-sm-3 col-xs-4">
-                                <div id="save-btn">
-                                    <button class="btn btn-general btn-purple" href="#" type="submit">Save</button>
+
+                        <!-- Sell Info. right Side -->
+                        <div class="col-md-6 col-sm-6">
+                            <p>Note Preview</p>
+                            <div class="upload-image">
+                                <input type="file" name="Note_Preview">
+                                <div id="img-upload-notes-review" class="text-center">
+                                    <img src="~/Content/img/User-Profile/upload.png" alt="Upload a picture">
+                                    <p>Upload a file</p>
                                 </div>
-                            </div>
-                            <div class="col-md-2 col-sm-3 col-xs-4">
-                                <div id="publish-btn">
-                                    <button class="btn btn-general btn-purple" href="#" type="submit">Publish</button>
-                                </div>
+                                <p>@ViewBag.Note_Preview</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Selling Information Ends-->
+                    <div class="row">
+                        <div class="col-md-2 col-sm-3 col-xs-4">
+                            <div id="save-btn">
+                                <button class="btn btn-general btn-purple" href="#" type="submit" name="save" value="save">Save</button>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-3 col-xs-4">
+                            <div id="publish-btn">
+                                <button class="btn btn-general btn-purple" href="#" type="button" data-toggle="modal" data-target="#exampleModal" name="publish" value="publish">Publish</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </form>
-    </section>
-    <!-- Add Notes Ends -->
-    <!-- Footer -->
-    <footer class="text-left">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-9 col-sm-9 col-xs-9">
-                    <p>copyright &copy; Tatvasoft All rights reserved.</p>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                    <ul class="social-list text-center">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
+                <!-- Selling Information Ends-->
             </div>
         </div>
-    </footer>
-    <!-- Footer Ends -->
-    <!-- JQuery -->
-    <script src="~/Scripts/js/jquery.min.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="~/Scripts/js/bootstrap/bootstrap.min.js"></script>
-
-    <!-- Custom JS -->
-    <script src="~/Scripts/js/script.js"></script>
-
-    @Scripts.Render("~/bundles/jqueryval")
-
-</body>
-
-</html>
+    @*</form>*@
+    }
+</section>
+<!-- Add Notes Ends -->
