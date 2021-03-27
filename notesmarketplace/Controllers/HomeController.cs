@@ -14,6 +14,7 @@ namespace notesmarketplace.Controllers
         NotesMarketPlaceEntities db = new NotesMarketPlaceEntities();
         public ActionResult Index()
         {
+            ViewBag.Title = "Notes MarketPlace";
             return View();
         }
     }
