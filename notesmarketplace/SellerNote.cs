@@ -11,6 +11,7 @@ namespace notesmarketplace
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.Web;
 
     public partial class SellerNote
@@ -32,8 +33,10 @@ namespace notesmarketplace
         public Nullable<System.DateTime> PublishedDate { get; set; }
         public string Title { get; set; }
         public int Category { get; set; }
-        public HttpPostedFileBase Display_Picture { get; set; }
+        public HttpPostedFileBase Display_Picture { get; set; }  
         public string DisplayPicture { get; set; }
+        public HttpPostedFileBase Note_Attachment { get; set; }
+        public string NoteAttachment { get; set; }
         public HttpPostedFileBase Upload_Note { get; set; }
         public string UploadNote { get; set; }
         public Nullable<int> NoteType { get; set; }

@@ -164,6 +164,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\ContactUs.cs" />
+    <Compile Include="Models\dashboard.cs" />
+    <Compile Include="Models\ResetPassword.cs" />
+    <Compile Include="MyClass\RandomPassword.cs" />
     <Compile Include="NoteCategory.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -203,6 +206,7 @@
     <Content Include="Content\css\bootstrap\bootstrap.css" />
     <Content Include="Content\css\bootstrap\bootstrap.min.css" />
     <Content Include="Content\css\bootstrap\bootstrap.min.js" />
+    <Content Include="Content\css\datatable\jquery.dataTables.min.css" />
     <Content Include="Content\css\font-awesome\css\font-awesome.css" />
     <Content Include="Content\css\font-awesome\css\font-awesome.min.css" />
     <Content Include="Content\css\font-awesome\fonts\fontawesome-webfont.svg" />
@@ -284,8 +288,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\css\font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\css\font-awesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\css\font-awesome\fonts\fontawesome-webfont.woff" />
@@ -304,12 +306,15 @@
     <Content Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
-    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\datatable\jquery.dataTables.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -321,6 +326,9 @@
     <Content Include="Scripts\js\popup\popper.min.js" />
     <Content Include="Scripts\js\script.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\sweetalert\sweetalert2%4010.js" />
+    <Content Include="Uploads\bevdo.jpeg" />
+    <Content Include="Uploads\Default\ProfilePicture\cust-1.jpg" />
     <Content Include="Uploads\lazzyboy.jpeg" />
     <Content Include="Views\admin\add-admin.html" />
     <Content Include="Views\admin\add-category.html" />
@@ -354,6 +362,8 @@
     <Content Include="Views\admin\published-notes.html" />
     <Content Include="Views\admin\rejected-notes.html" />
     <Content Include="Views\admin\spam-reports.html" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
     <None Include="Views\pages\AddNotes.cshtml" />
     <None Include="Views\pages\BuyerRequest.cshtml" />
     <None Include="Views\pages\ContactUs.cshtml" />
@@ -386,12 +396,17 @@
     <Content Include="Views\admin\css\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="Views\admin\css\font-awesome\fonts\FontAwesome.otf" />
     <Content Include="Views\admin\debug.log" />
+    <Content Include="Views\Shared\NonRegisterUser.cshtml" />
+    <Content Include="Views\Shared\RegisterUser.cshtml" />
+    <Content Include="Views\Shared\RegistrationPages.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Notes\DisplayPicture\" />
     <Folder Include="Notes\NotePreview\" />
-    <Folder Include="Views\Shared\" />
+    <Folder Include="Uploads\Default\DisplayNotes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -399,8 +414,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
